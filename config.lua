@@ -33,19 +33,31 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-   --  Colorschemes
+  --  Colorschemes
   {"lunarvim/colorschemes"},
   {"folke/tokyonight.nvim"},
 
   -- Utils
   {"Pocco81/AutoSave.nvim"},
   -- TODO gx open links
-  {"felipec/vim-sanegx"},
-
+  {"felipec/vim-sanegx",
+    event = "BufRead"
+  },
+  {
+    "folke/persistence.nvim",
+    event = "VimEnter",
+    module = "persistence",
+    config = function()
+      require("persistence").setup {
+        dir = vim.fn.expand(vim.fn.stdpath "config" .. "/session/"),
+        options = { "buffers", "curdir", "tabpages", "winsize" },
+      }
+    end,
+  },
   -- LSP related
   {"ray-x/lsp_signature.nvim",
-        config = function() require"lsp_signature".on_attach() end,
-        event = "InsertEnter"
+    config = function() require"lsp_signature".on_attach() end,
+    event = "InsertEnter"
   },
 
   -- Markdown related
@@ -53,5 +65,13 @@ lvim.plugins = {
     config = function() require "user.vim-markdown" end
   },
   {"dkarter/bullets.vim"},
+  {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+    config = function()
+      vim.g.mkdp_auto_start = 1
+    end,
+  },
 }
 
