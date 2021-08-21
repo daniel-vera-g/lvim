@@ -1,4 +1,5 @@
 return {
-  javascript = require "user.languages.javascript"
+  javascript = require "user.languages.javascript",
+  markdown = require "user.languages.markdown"
 }
 
