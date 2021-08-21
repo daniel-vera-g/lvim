@@ -1,59 +1,33 @@
--- LunarVim internal settings
+-- Basic Lunarvim configuration
 lvim.format_on_save = true
 lvim.lint_on_save = true
+
 lvim.colorscheme = "spacegray"
+
 lvim.encoding="utf-8"
 lvim.fileencoding="utf-8"
 
--- Vim built in
+lvim.leader = ','
+
+-- Basic vim built in config
 vim.opt.cmdheight = 1
 vim.opt.relativenumber = true
 vim.opt.wrap = true
 vim.opt.spell = false
 
--- Spaces for tabs
-vim.opt.tabstop=2 -- number of spaces used as tab for file(Number of visual spaces per TAB)
-vim.opt.softtabstop=2 -- number of spaces used as tab for editing(Number of spaces in TAB when editing)
-vim.opt.shiftwidth=2 -- number of spaces used to autoindent(Number of spaces indented when reindent operations (>> and <<) are used)
-vim.opt.expandtab=true -- expand tabs into spaces(Convert TABs to spaces)
-vim.opt.smarttab=true -- smart tabulation and backspace(Enable intelligent tabbing and spacing for indentation and alignment)
-vim.opt.bs="indent,eol,start" -- allow backspacing over everything
-vim.opt.ai=true -- Auto indent
+-- Other user configuration
+require 'user.config'
 
+-- User specific keybindings
+require 'user.keybindings'
 
--- keymappings [view all the defaults by pressing <leader>Lk]
-lvim.leader = ','
-vim.api.nvim_set_keymap('n', 'Y', 'yg_', {noremap=true})
-
--- Language specific configurations
-lvim.lang.javascript.formatters = { { exe = "prettier" } }
-lvim.lang.javascript.linters = { { exe = "eslint_d" } }
-
--- +++
--- Plugin configs
--- +++
-
-lvim.builtin.dashboard.active = true
-
-lvim.builtin.terminal.active = true
-
--- nvimtree
-lvim.builtin.nvimtree.side = "right"
-lvim.builtin.nvimtree.show_icons.git = 0
-lvim.builtin.nvimtree.hide_dotfiles = 0
-
--- Treesitter parsers
-lvim.builtin.treesitter.ensure_installed = {}
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
-
-
--- Additional Plugins
+---
+-- Plugins
+---
 lvim.plugins = {
   --  Colorschemes
   {"lunarvim/colorschemes"},
   {"folke/tokyonight.nvim"},
-
   -- Utils
   {"Pocco81/AutoSave.nvim"},
   {"tpope/vim-surround"},
@@ -81,10 +55,8 @@ lvim.plugins = {
 
   -- Markdown related
   {"plasticboy/vim-markdown",
-    config = function() require "user.vim-markdown" end
   },
   {"dkarter/bullets.vim",
-    config = function () require 'user.vim-markdown' end
   },
   {
     "iamcco/markdown-preview.nvim",
@@ -114,7 +86,10 @@ lvim.plugins = {
       "Gedit"
     },
     ft = {"fugitive"},
-    config = function () require 'user.git' end
   },
 }
 
+-- Language specific config
+require 'user.languages'
+-- Plugin config
+require 'user.plugins'
