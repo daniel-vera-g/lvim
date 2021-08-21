@@ -22,8 +22,12 @@ vim.opt.ai=true -- Auto indent
 
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
-lvim.leader = ","
+lvim.leader = ','
 vim.api.nvim_set_keymap('n', 'Y', 'yg_', {noremap=true})
+
+-- Language specific configurations
+lvim.lang.javascript.formatters = { { exe = "prettier" } }
+lvim.lang.javascript.linters = { { exe = "eslint_d" } }
 
 -- +++
 -- Plugin configs
@@ -79,7 +83,9 @@ lvim.plugins = {
   {"plasticboy/vim-markdown",
     config = function() require "user.vim-markdown" end
   },
-  {"dkarter/bullets.vim"},
+  {"dkarter/bullets.vim",
+    config = function () require 'user.vim-markdown' end
+  },
   {
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
@@ -91,23 +97,24 @@ lvim.plugins = {
 
   -- Git
   {
-  "tpope/vim-fugitive",
-  cmd = {
-    "G",
-    "Git",
-    "Gdiffsplit",
-    "Gread",
-    "Gwrite",
-    "Ggrep",
-    "GMove",
-    "GDelete",
-    "GBrowse",
-    "GRemove",
-    "GRename",
-    "Glgrep",
-    "Gedit"
+    "tpope/vim-fugitive",
+    cmd = {
+      "G",
+      "Git",
+      "Gdiffsplit",
+      "Gread",
+      "Gwrite",
+      "Ggrep",
+      "GMove",
+      "GDelete",
+      "GBrowse",
+      "GRemove",
+      "GRename",
+      "Glgrep",
+      "Gedit"
+    },
+    ft = {"fugitive"},
+    config = function () require 'user.git' end
   },
-  ft = {"fugitive"}
-},
 }
 
