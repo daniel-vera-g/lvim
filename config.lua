@@ -54,6 +54,7 @@ lvim.plugins = {
   },
 
   -- Markdown related
+  {"lervag/wiki.vim"},
   {"plasticboy/vim-markdown",
   },
   {"dkarter/bullets.vim",
