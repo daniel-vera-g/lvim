@@ -1,0 +1,19 @@
+{
+  "Insert Snippets link": {
+    "scope": "markdown",
+    "prefix": "fl",
+    "body": [
+      "[[$1]]$0"
+    ],
+    "description": "Insert a foam link."
+  },
+  "Simple markdown link": {
+    "scope": "markdown",
+    "prefix": "sl",
+    "body": [
+      "<$1>$0"
+    ],
+    "description": "Insert a simple markdown link."
+  }
+}
+
