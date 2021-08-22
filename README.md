@@ -10,9 +10,9 @@ Here only to experiment. Soon to be migrated into my dotfiles.
 
 - In submodules like `languages` or `plugins`, an `init.lua` file is used. This file allows the option to export all module configuration in one export. In the `config.lua` we then can import the whole module.
 
-```markdown
+```
 .
-├── config.lua -> **Entry file, basic configuration and instantiation of plugins**
+├── config.lua > **Entry file, basic configuration and instantiation of plugins**
 └── lua
     └── user 
         > **User configuration**
