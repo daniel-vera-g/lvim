@@ -10,4 +10,7 @@ return {
   compe = require('user.plugins.compe'),
   wiki = require("user.plugins.wiki"),
   autosave = require('user.plugins.autosave'),
+  null_ls = require("user.plugins.null_ls"),
+  zen_mode = require("user.plugins.zen_mode"),
+  twilight = require("user.plugins.twilight")
 }
