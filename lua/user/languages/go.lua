@@ -1,1 +1,1 @@
-lvim.lang.go.formatters = {{ exe = "gofmt" }}
+lvim.lang.go.formatters = {{ exe = "goimports" }}
