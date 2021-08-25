@@ -2,7 +2,8 @@
 lvim.format_on_save = true
 lvim.lint_on_save = true
 
-lvim.colorscheme = "spacegray"
+lvim.colorscheme = "catppuccino"
+require("user.plugins.catppuccino")
 
 lvim.encoding="utf-8"
 lvim.fileencoding="utf-8"
@@ -28,10 +29,13 @@ lvim.plugins = {
   --  Colorschemes
   {"lunarvim/colorschemes"},
   {"folke/tokyonight.nvim"},
+  {"Pocco81/Catppuccino.nvim"},
   -- Utils
   {"Pocco81/AutoSave.nvim"},
   {"tpope/vim-surround"},
   {'machakann/vim-highlightedyank'},
+  {"folke/zen-mode.nvim"},
+  { "folke/twilight.nvim"},
   -- TODO gx open links
   {"felipec/vim-sanegx",
     event = "BufRead"
