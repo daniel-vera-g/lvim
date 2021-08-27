@@ -6,4 +6,7 @@ vim.opt.expandtab=true -- expand tabs into spaces(Convert TABs to spaces)
 vim.opt.smarttab=true -- smart tabulation and backspace(Enable intelligent tabbing and spacing for indentation and alignment)
 vim.opt.bs="indent,eol,start" -- allow backspacing over everything
 vim.opt.ai=true -- Auto indent
-
+vim.opt.cmdheight = 1
+vim.opt.relativenumber = true
+vim.opt.wrap = true
+vim.opt.spell = false
