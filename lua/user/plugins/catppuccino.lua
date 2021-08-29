@@ -1,4 +1,5 @@
 local catppuccino = require("catppuccino")
+
 catppuccino.setup(
   {
     colorscheme = "catppuccino",
@@ -26,7 +27,9 @@ catppuccino.setup(
       gitgutter = false,
       gitsigns = true,
       telescope = true,
-      nvimtree = true,
+      -- TODO setting this to true conflicts with nvimtree
+      -- See: https://github.com/daniel-vera-g/lvim/issues/1
+      nvimtree = false,
       which_key = true,
       indent_blankline = false,
       dashboard = true,
