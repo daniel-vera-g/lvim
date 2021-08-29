@@ -9,7 +9,6 @@ lvim.plugins = {
   {'machakann/vim-highlightedyank'},
   {"folke/zen-mode.nvim"},
   { "folke/twilight.nvim"},
-  -- TODO gx open links
   {"felipec/vim-sanegx",
     event = "BufRead"
   },
@@ -81,5 +80,6 @@ return {
   autosave = require('user.plugins.autosave'),
   null_ls = require("user.plugins.null_ls"),
   zen_mode = require("user.plugins.zen_mode"),
-  twilight = require("user.plugins.twilight")
+  twilight = require("user.plugins.twilight"),
+  catppuccino = require("user.plugins.catppuccino")
 }
