@@ -14,6 +14,22 @@
       "<$1>$0"
     ],
     "description": "Insert a simple markdown link."
-  }
+  },
+  "Textidote ignore begin": {
+    "scope": "markdown",
+    "prefix": "tib",
+    "body": [
+      "<!-- textidote: ignore begin -->"
+    ],
+    "description": "Textidote ignore next lines."
+  },
+  "Textidote ignore end": {
+    "scope": "markdown",
+    "prefix": "tie",
+    "body": [
+      "<!-- textidote: ignore end -->"
+    ],
+    "description": "Textidote end ignore session."
+  },
 }
 
