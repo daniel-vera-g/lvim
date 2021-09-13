@@ -31,5 +31,19 @@
     ],
     "description": "Textidote end ignore session."
   },
+  "Insert footnote": {
+    "prefix": "ifn",
+    "body": [
+      "[^$1]$0"
+    ],
+    "description": "Insert a footnote in the current text flow"
+  },
+  "Insert footnote content": {
+    "prefix": "ifc",
+    "body": [
+      "[^$1]: $2$0"
+    ],
+    "description": "Insert the content of a footnote."
+  }
 }
 
