@@ -21,3 +21,8 @@ Here only to experiment. Soon to be migrated into my dotfiles.
 6. `./lsp-settings/`: Home for the Language server settings
 7. `./snippets/`: Custom snippets in VSCode Format
 8. `./spell/`: Own spell dictionaries
+
+## References
+
+1. Docs: https://www.lunarvim.org/
+2. Repo: https://github.com/LunarVim/LunarVim
