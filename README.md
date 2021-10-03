@@ -24,5 +24,7 @@ Here only to experiment. Soon to be migrated into my dotfiles.
 
 ## References
 
+Lunarvim:
+
 1. Docs: https://www.lunarvim.org/
 2. Repo: https://github.com/LunarVim/LunarVim
