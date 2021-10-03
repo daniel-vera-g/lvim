@@ -24,6 +24,7 @@ lvim.plugins = {
 	},
 
 	-- LSP related
+	-- Cool signature(F.ex Params & co)
 	{
 		"ray-x/lsp_signature.nvim",
 		config = function()
@@ -31,6 +32,7 @@ lvim.plugins = {
 		end,
 		event = "InsertEnter",
 	},
+	-- Diagnostics, references, telescope results, ...
 	{ "folke/trouble.nvim" },
 
 	-- Markdown related
@@ -82,4 +84,6 @@ return {
 	zen_mode = require("user.plugins.zen_mode"),
 	twilight = require("user.plugins.twilight"),
 	catppuccino = require("user.plugins.catppuccino"),
+	lsp_signature = require("user.plugins.lsp_signature"),
+	luaSnip = require("user.plugins.luaSnip"),
 }
