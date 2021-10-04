@@ -1,5 +1,6 @@
 vim.g.vim_markdown_auto_insert_bullets = 1
 vim.g.vim_markdown_folding_level = 2
+vim.g.vim_markdown_folding_disabled = 1
 
 vim.g.vim_markdown_conceal = 1
 vim.g.vim_markdown_conceal_code_blocks = 0
