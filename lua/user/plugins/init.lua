@@ -24,14 +24,16 @@ lvim.plugins = {
 	},
 
 	-- LSP related
+
+	-- TODO configure properly, so it does not mess arround in go
 	-- Cool signature(F.ex Params & co)
-	{
-		"ray-x/lsp_signature.nvim",
-		config = function()
-			require("lsp_signature").on_attach()
-		end,
-		event = "InsertEnter",
-	},
+	-- {
+	-- 	"ray-x/lsp_signature.nvim",
+	-- 	config = function()
+	-- 		require("lsp_signature").on_attach()
+	-- 	end,
+	-- 	event = "InsertEnter",
+	-- },
 	-- Diagnostics, references, telescope results, ...
 	{ "folke/trouble.nvim" },
 
@@ -84,6 +86,6 @@ return {
 	zen_mode = require("user.plugins.zen_mode"),
 	twilight = require("user.plugins.twilight"),
 	catppuccino = require("user.plugins.catppuccino"),
-	lsp_signature = require("user.plugins.lsp_signature"),
+	-- lsp_signature = require("user.plugins.lsp_signature"),
 	luaSnip = require("user.plugins.luaSnip"),
 }
