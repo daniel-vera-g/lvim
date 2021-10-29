@@ -4,6 +4,10 @@
 
 Here only to experiment. Soon to be migrated into my dotfiles.
 
+## Install
+
+> `git clone git@github.com:daniel-vera-g/lvim.git ~/.config/lvim/`
+
 ## Structure
 
 > The aim is to provide a modular structure to configure different options, plugins, languages,...
