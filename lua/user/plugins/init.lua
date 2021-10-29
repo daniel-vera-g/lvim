@@ -1,10 +1,13 @@
 lvim.plugins = {
+	-- languages
+	{ "fatih/vim-go" },
 	--  Colorschemes
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
 	{ "Pocco81/Catppuccino.nvim" },
 
 	-- Utils
+	{ "github/copilot.vim" },
 	{ "Pocco81/AutoSave.nvim" },
 	{ "tpope/vim-surround" },
 	{ "machakann/vim-highlightedyank" },
