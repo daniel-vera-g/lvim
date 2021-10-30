@@ -75,6 +75,9 @@ lvim.plugins = {
 	},
 }
 
+-- Remove as currently not working properly
+lvim.builtin.autopairs.active = false
+
 return {
 	bullets = require("user.plugins.bullets"),
 	nvimtree = require("user.plugins.nvimtree"),
