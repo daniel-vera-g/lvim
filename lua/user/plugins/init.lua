@@ -1,13 +1,23 @@
 lvim.plugins = {
 	-- languages
 	{ "fatih/vim-go" },
+
 	--  Colorschemes
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
 	{ "Pocco81/Catppuccino.nvim" },
 
-	-- Utils
+	-- Github stuff
 	{ "github/copilot.vim" },
+	{
+		"pwntester/octo.nvim",
+		config = function()
+			require("octo").setup()
+		end,
+	},
+
+	-- Utils
+	{ "jbyuki/venn.nvim" },
 	{ "Pocco81/AutoSave.nvim" },
 	{ "tpope/vim-surround" },
 	{ "machakann/vim-highlightedyank" },
@@ -94,4 +104,5 @@ return {
 	catppuccino = require("user.plugins.catppuccino"),
 	-- lsp_signature = require("user.plugins.lsp_signature"),
 	luaSnip = require("user.plugins.luaSnip"),
+	venn = require("user.plugins.venn"),
 }
