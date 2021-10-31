@@ -26,27 +26,24 @@ lvim.plugins = {
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{
 		"folke/persistence.nvim",
-		event = "VimEnter",
+		event = "BufReadPre", -- this will only start session saving when an actual file was opened
 		module = "persistence",
 		config = function()
-			require("persistence").setup({
-				dir = vim.fn.expand(vim.fn.stdpath("config") .. "/session/"),
-				options = { "buffers", "curdir", "tabpages", "winsize" },
-			})
+			require("persistence").setup()
 		end,
+
 	},
 
 	-- LSP related
-
 	-- TODO configure properly, so it does not mess arround in go
 	-- Cool signature(F.ex Params & co)
-	-- {
-	-- 	"ray-x/lsp_signature.nvim",
-	-- 	config = function()
-	-- 		require("lsp_signature").on_attach()
-	-- 	end,
-	-- 	event = "InsertEnter",
-	-- },
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "BufRead",
+		config = function()
+			require("lsp_signature").on_attach()
+		end
+	},
 	-- Diagnostics, references, telescope results, ...
 	{ "folke/trouble.nvim" },
 
@@ -58,9 +55,6 @@ lvim.plugins = {
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && npm install",
 		ft = "markdown",
-		config = function()
-			vim.g.mkdp_auto_start = 1
-		end,
 	},
 
 	-- Git
@@ -85,24 +79,21 @@ lvim.plugins = {
 	},
 }
 
--- Remove as currently not working properly
-lvim.builtin.autopairs.active = false
-
 return {
 	bullets = require("user.plugins.bullets"),
 	nvimtree = require("user.plugins.nvimtree"),
 	treesitter = require("user.plugins.treesitter"),
 	vim_markdown = require("user.plugins.vim_markdown"),
+	vim_markdown_preview = require("user.plugins.vim_markdown_preview"),
 	terminal = require("user.plugins.terminal"),
 	fugitive = require("user.plugins.fugitive"),
 	dashboard = require("user.plugins.dashboard"),
 	vsnips = require("user.plugins.vsnips"),
 	wiki = require("user.plugins.wiki"),
-	autosave = require("user.plugins.autosave"),
+	autosave = require("user.plugins.autosave_config"),
 	zen_mode = require("user.plugins.zen_mode"),
-	twilight = require("user.plugins.twilight"),
-	catppuccino = require("user.plugins.catppuccino"),
-	-- lsp_signature = require("user.plugins.lsp_signature"),
+	twilight = require("user.plugins.twilight_config"),
+	catppuccino = require("user.plugins.catppuccino_config"),
 	luaSnip = require("user.plugins.luaSnip"),
 	venn = require("user.plugins.venn"),
 }
