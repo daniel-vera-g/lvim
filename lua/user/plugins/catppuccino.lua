@@ -2,7 +2,6 @@ local catppuccino = require("catppuccino")
 
 catppuccino.setup(
   {
-    colorscheme = "catppuccino",
     transparency = false,
     styles = {
       comments = "italic",

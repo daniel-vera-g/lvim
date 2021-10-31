@@ -4,6 +4,12 @@
 
 Here only to experiment. Soon to be migrated into my dotfiles.
 
+## Install
+
+> `git clone git@github.com:daniel-vera-g/lvim.git ~/.config/lvim/`
+
+I use the nightly neovim built. Running `./updateLunar.sh` installs the latest neovim instance as Appimage, updates Lunarvim and installs/updates Plugins. As always, check the script for yourself before running ✌
+
 ## Structure
 
 > The aim is to provide a modular structure to configure different options, plugins, languages,...
@@ -21,3 +27,10 @@ Here only to experiment. Soon to be migrated into my dotfiles.
 6. `./lsp-settings/`: Home for the Language server settings
 7. `./snippets/`: Custom snippets in VSCode Format
 8. `./spell/`: Own spell dictionaries
+
+## References
+
+Lunarvim:
+
+1. Docs: https://www.lunarvim.org/
+2. Repo: https://github.com/LunarVim/LunarVim
