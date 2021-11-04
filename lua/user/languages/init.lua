@@ -1,3 +1,5 @@
+lvim.lsp.automatic_servers_installation = false
+
 return {
 	javascript = require("user.languages.javascript"),
 	markdown = require("user.languages.markdown"),
