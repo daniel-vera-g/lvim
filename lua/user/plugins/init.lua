@@ -31,19 +31,18 @@ lvim.plugins = {
 		config = function()
 			require("persistence").setup()
 		end,
-
 	},
 
 	-- LSP related
 	-- TODO configure properly, so it does not mess arround in go
 	-- Cool signature(F.ex Params & co)
-	{
-		"ray-x/lsp_signature.nvim",
-		event = "BufRead",
-		config = function()
-			require("lsp_signature").on_attach()
-		end
-	},
+	-- {
+	-- 	"ray-x/lsp_signature.nvim",
+	-- 	event = "BufRead",
+	-- 	config = function()
+	-- 		require("lsp_signature").on_attach()
+	-- 	end
+	-- },
 	-- Diagnostics, references, telescope results, ...
 	{ "folke/trouble.nvim" },
 
@@ -96,4 +95,5 @@ return {
 	catppuccino = require("user.plugins.catppuccino_config"),
 	luaSnip = require("user.plugins.luaSnip"),
 	venn = require("user.plugins.venn"),
+	copilot = require("user.plugins.copilot_config"),
 }
