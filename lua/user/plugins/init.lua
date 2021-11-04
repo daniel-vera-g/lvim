@@ -36,13 +36,18 @@ lvim.plugins = {
 	-- LSP related
 	-- TODO configure properly, so it does not mess arround in go
 	-- Cool signature(F.ex Params & co)
-	-- {
-	-- 	"ray-x/lsp_signature.nvim",
-	-- 	event = "BufRead",
-	-- 	config = function()
-	-- 		require("lsp_signature").on_attach()
-	-- 	end
-	-- },
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "BufRead",
+		config = function()
+			require("lsp_signature").on_attach()
+		end,
+	},
+	-- a tree like view for symbols
+	{
+		"simrat39/symbols-outline.nvim",
+		cmd = "SymbolsOutline",
+	},
 	-- Diagnostics, references, telescope results, ...
 	{ "folke/trouble.nvim" },
 
@@ -96,4 +101,6 @@ return {
 	luaSnip = require("user.plugins.luaSnip"),
 	venn = require("user.plugins.venn"),
 	copilot = require("user.plugins.copilot_config"),
+	lsp_signature = require("user.plugins.lsp_signature_config"),
+	persistence = require("user.plugins.persistence_config"),
 }
