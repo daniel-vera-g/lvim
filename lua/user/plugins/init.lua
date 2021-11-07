@@ -2,6 +2,23 @@ lvim.plugins = {
 	-- languages
 	{ "fatih/vim-go" },
 
+	-- LSP related
+	-- Cool signatures while typing
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "BufRead",
+		config = function()
+			require("lsp_signature").on_attach()
+		end,
+	},
+	-- a tree like view for symbols
+	{
+		"simrat39/symbols-outline.nvim",
+		cmd = "SymbolsOutline",
+	},
+	-- Diagnostics, references, telescope results, ...
+	{ "folke/trouble.nvim" },
+
 	--  Colorschemes
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
@@ -33,27 +50,10 @@ lvim.plugins = {
 		end,
 	},
 
-	-- LSP related
-	-- TODO configure properly, so it does not mess arround in go
-	-- Cool signature(F.ex Params & co)
-	{
-		"ray-x/lsp_signature.nvim",
-		event = "BufRead",
-		config = function()
-			require("lsp_signature").on_attach()
-		end,
-	},
-	-- a tree like view for symbols
-	{
-		"simrat39/symbols-outline.nvim",
-		cmd = "SymbolsOutline",
-	},
-	-- Diagnostics, references, telescope results, ...
-	{ "folke/trouble.nvim" },
-
 	-- Markdown related
 	{ "lervag/wiki.vim" },
 	{ "plasticboy/vim-markdown" },
+	{ "godlygeek/tabular" },
 	{ "dkarter/bullets.vim" },
 	{
 		"iamcco/markdown-preview.nvim",
@@ -84,22 +84,23 @@ lvim.plugins = {
 }
 
 return {
-	bullets = require("user.plugins.bullets"),
-	nvimtree = require("user.plugins.nvimtree"),
-	treesitter = require("user.plugins.treesitter"),
-	vim_markdown = require("user.plugins.vim_markdown"),
-	vim_markdown_preview = require("user.plugins.vim_markdown_preview"),
-	terminal = require("user.plugins.terminal"),
-	fugitive = require("user.plugins.fugitive"),
-	dashboard = require("user.plugins.dashboard"),
-	vsnips = require("user.plugins.vsnips"),
-	wiki = require("user.plugins.wiki"),
+	-- Follow the naming to avoid namespace clashes: plugin -> plugin_config
+	bullets = require("user.plugins.bullets_config"),
+	nvimtree = require("user.plugins.nvimtree_config"),
+	treesitter = require("user.plugins.treesitter_config"),
+	vim_markdown = require("user.plugins.vim_markdown_config"),
+	vim_markdown_preview = require("user.plugins.vim_markdown_preview_config"),
+	terminal = require("user.plugins.terminal_config"),
+	fugitive = require("user.plugins.fugitive_config"),
+	dashboard = require("user.plugins.dashboard_config"),
+	vsnips = require("user.plugins.vsnips_config"),
+	wiki = require("user.plugins.wiki_config"),
 	autosave = require("user.plugins.autosave_config"),
-	zen_mode = require("user.plugins.zen_mode"),
+	zen_mode = require("user.plugins.zen_mode_config"),
 	twilight = require("user.plugins.twilight_config"),
 	catppuccino = require("user.plugins.catppuccino_config"),
-	luaSnip = require("user.plugins.luaSnip"),
-	venn = require("user.plugins.venn"),
+	luaSnip = require("user.plugins.luaSnip_config"),
+	venn = require("user.plugins.venn_config"),
 	copilot = require("user.plugins.copilot_config"),
 	lsp_signature = require("user.plugins.lsp_signature_config"),
 	persistence = require("user.plugins.persistence_config"),
