@@ -4,5 +4,6 @@ require("user.lvim")
 require("user.config")
 
 require("user.keybindings")
-require("user.languages")
 require("user.plugins")
+require("user.formatters")
+require("user.linters")
