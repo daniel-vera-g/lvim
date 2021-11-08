@@ -103,4 +103,5 @@ return {
 	copilot = require("user.plugins.copilot_config"),
 	lsp_signature = require("user.plugins.lsp_signature_config"),
 	persistence = require("user.plugins.persistence_config"),
+	vim_go = require("user.plugins.vim_go_config"),
 }
