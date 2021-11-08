@@ -1,4 +1,1 @@
--- Don't check spell on default
-lvim.autocommands.custom_groups = {
-	{ "FileType", "markdown", "setlocal nospell" },
-}
+vim.api.nvim_command("set nospell")
