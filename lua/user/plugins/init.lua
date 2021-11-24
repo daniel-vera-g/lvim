@@ -81,6 +81,8 @@ lvim.plugins = {
 		},
 		ft = { "fugitive" },
 	},
+
+	{ "lepture/vim-jinja" },
 }
 
 return {
