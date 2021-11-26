@@ -1,5 +1,6 @@
 -- Quickfix before cmp integration
 -- Source: https://github.com/LunarVim/LunarVim/issues/1856#issuecomment-954224770
+-- Alternative: https://github.com/abzcoding/lvim/blob/377f7ee64bd483f33ac724eba91b581b4d18fba1/lua/user/builtin.lua#L49
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""
