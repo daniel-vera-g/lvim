@@ -9,3 +9,5 @@ lvim.fileencoding = "utf-8"
 lvim.leader = ","
 
 lvim.foldmethod = "syntax"
+
+lvim.builtin.dashboard.active = true
