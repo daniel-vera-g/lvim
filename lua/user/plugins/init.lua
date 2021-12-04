@@ -17,7 +17,13 @@ lvim.plugins = {
 		cmd = "SymbolsOutline",
 	},
 	-- Diagnostics, references, telescope results, ...
-	{ "folke/trouble.nvim" },
+	{
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({})
+		end,
+	},
 
 	--  Colorschemes
 	{ "lunarvim/colorschemes" },
@@ -51,7 +57,9 @@ lvim.plugins = {
 	},
 
 	-- Markdown related
-	{ "lervag/wiki.vim" },
+	-- Using telekasten currently as daily driver :-)
+	-- { "lervag/wiki.vim" },
+	{ "renerocksai/telekasten.nvim" },
 	{ "plasticboy/vim-markdown" },
 	{ "godlygeek/tabular" },
 	{ "dkarter/bullets.vim" },
@@ -60,6 +68,7 @@ lvim.plugins = {
 		run = "cd app && npm install",
 		ft = "markdown",
 	},
+	{ "ekickx/clipboard-image.nvim" },
 
 	-- Git
 	{
@@ -93,7 +102,7 @@ return {
 	terminal = require("user.plugins.terminal_config"),
 	fugitive = require("user.plugins.fugitive_config"),
 	dashboard = require("user.plugins.dashboard_config"),
-	wiki = require("user.plugins.wiki_config"),
+	-- wiki = require("user.plugins.wiki_config"),
 	autosave = require("user.plugins.autosave_config"),
 	zen_mode = require("user.plugins.zen_mode_config"),
 	twilight = require("user.plugins.twilight_config"),
@@ -104,4 +113,5 @@ return {
 	lsp_signature = require("user.plugins.lsp_signature_config"),
 	persistence = require("user.plugins.persistence_config"),
 	vim_go = require("user.plugins.vim_go_config"),
+	telekasten = require("user.plugins.telekasten_config"),
 }
