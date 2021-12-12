@@ -30,10 +30,16 @@ require("telekasten").setup({
 	-- set to `nil` or do not specify if you do not want a template
 	-- template_new_weekly= home .. '/' .. 'templates/weekly.md',
 
+	-- command palette theme: dropdown (window) or ivy (bottom panel)
+	command_palette_theme = "dropdown",
+
 	-- image link style
 	-- wiki:     ![[image name]]
 	-- markdown: ![](image_subdir/xxxxx.png)
 	image_link_style = "markdown",
+
+	-- make syntax available to markdown buffers and telescope previewers
+	install_syntax = true,
 
 	-- integrate with calendar-vim
 	plug_into_calendar = false,
@@ -55,11 +61,14 @@ require("telekasten").setup({
 
 lvim.builtin.which_key.mappings["z"] = {
 	name = "Telekasten",
-	g = { "<cmd>lua require('telekasten').find_notes()<cr>", "Find notes" },
-	f = { "<cmd>lua require('telekasten').search_notes()<cr>", "Search notes" },
+	f = { "<cmd>lua require('telekasten').find_notes()<cr>", "Find note" },
+	g = { "<cmd>lua require('telekasten').search_notes()<cr>", "Search notes" },
 	z = { "<cmd>lua require('telekasten').follow_link()<cr>", "Follow link" },
 	T = { "<cmd>lua require('telekasten').goto_today()<cr>", "Go to today" },
 	n = { "<cmd>lua require('telekasten').new_note()<cr>", "New note" },
+	t = { "<cmd>lua require('telekasten').new_templated_note()<cr>", "New templated note" },
+	p = { "<cmd>lua require('telekasten').panel()<cr>", "Panel" },
+	l = { "<cmd>lua require('telekasten').insert_link()<cr>", "Insert link" },
 }
 
 vim.api.nvim_set_keymap("i", "[[", "<ESC>:lua require('telekasten').insert_link()<CR>", { noremap = true })
