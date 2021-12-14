@@ -28,7 +28,7 @@ lvim.plugins = {
 	--  Colorschemes
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
-	{ "Pocco81/Catppuccino.nvim" },
+	{ "catppuccin/nvim", as = "catppuccin" },
 
 	-- Github stuff
 	{ "github/copilot.vim" },
