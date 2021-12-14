@@ -1,7 +1,7 @@
 lvim.format_on_save = true
 lvim.lint_on_save = true
 
-lvim.colorscheme = "neon_latte"
+lvim.colorscheme = "catppuccin"
 
 lvim.encoding = "utf-8"
 lvim.fileencoding = "utf-8"
