@@ -31,7 +31,9 @@ require("telekasten").setup({
 	-- template_new_weekly= home .. '/' .. 'templates/weekly.md',
 
 	-- command palette theme: dropdown (window) or ivy (bottom panel)
-	command_palette_theme = "dropdown",
+	command_palette_theme = "ivy",
+
+	subdirs_in_links = false,
 
 	-- image link style
 	-- wiki:     ![[image name]]
