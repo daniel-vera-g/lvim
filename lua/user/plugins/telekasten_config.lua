@@ -10,6 +10,8 @@ require("telekasten").setup({
 	-- or nil if pasted images shouldn't go into a special subdir
 	image_subdir = "attachments",
 
+	take_over_my_home = false,
+
 	-- markdown file extension
 	extension = ".md",
 
