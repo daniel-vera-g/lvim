@@ -1,6 +1,12 @@
 lvim.plugins = {
 	-- languages
-	{ "fatih/vim-go" },
+	{
+		"ray-x/go.nvim",
+		config = function()
+			require("go").setup()
+		end,
+	},
+	{ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
 
 	-- LSP related
 	-- Cool signatures while typing
@@ -112,6 +118,5 @@ return {
 	copilot = require("user.plugins.copilot_config"),
 	lsp_signature = require("user.plugins.lsp_signature_config"),
 	persistence = require("user.plugins.persistence_config"),
-	vim_go = require("user.plugins.vim_go_config"),
 	telekasten = require("user.plugins.telekasten_config"),
 }

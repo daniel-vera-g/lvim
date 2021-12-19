@@ -11,3 +11,4 @@ lvim.leader = ","
 lvim.foldmethod = "syntax"
 
 lvim.builtin.dashboard.active = true
+lvim.builtin.dap.active = true

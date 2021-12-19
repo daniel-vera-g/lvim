@@ -6,6 +6,10 @@ formatters.setup({
 		filetypes = { "go", "go.mod" },
 	},
 	{
+		exe = "goimports",
+		filetypes = { "go", "go.mod" },
+	},
+	{
 		exe = "prettier",
 		filetypes = { "markdown", "md", "javascript", "json" },
 	},
