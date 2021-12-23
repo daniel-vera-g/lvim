@@ -1,10 +1,8 @@
--- General keybindings
--- keymappings [view all the defaults by pressing <leader>Lk]
-
--- Some helpers
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+
+-- General keybindings
+-- keymappings [view all the defaults by pressing <leader>Lk]
 
 -- Yank remaining line
 keymap("n", "Y", "yg_", { noremap = true })
@@ -37,3 +35,7 @@ keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
