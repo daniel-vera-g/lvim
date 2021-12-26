@@ -4,11 +4,20 @@ local autosave = require("autosave")
 autosave.setup({
 	enabled = true,
 	execution_message = "",
-	events = { "InsertLeave" },
+	events = { "InsertLeave", "TextChanged" },
+	conditions = {
+		exists = true,
+		filename_is_not = {},
+		filetype_is_not = { "markdown" },
+		modifiable = true,
+	},
 	write_all_buffers = true,
 	on_off_commands = true,
 	clean_command_line_interval = 0,
-	debounce_delay = 500,
+	debounce_delay = 135,
 })
+
+-- F5 Keymap to toggle autosave
+vim.api.nvim_set_keymap("n", "<F5>", "autosave#toggle()", { noremap = true, silent = true })
 
 return autosave

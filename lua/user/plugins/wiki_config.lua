@@ -6,3 +6,7 @@ vim.g.wiki_link_toggles = {
 		return "[[" + text + "]]"
 	end,
 }
+
+-- TODO to avoid overwriting the save whichkey mapping
+-- Add Whichkey mappings manually. Breaks "Enter". Set only on filetype?
+-- vim.g.wiki_mappings_use_defaults = "none"

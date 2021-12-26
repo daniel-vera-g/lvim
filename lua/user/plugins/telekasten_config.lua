@@ -10,7 +10,9 @@ require("telekasten").setup({
 	-- or nil if pasted images shouldn't go into a special subdir
 	image_subdir = "attachments",
 
+	-- Don't use telekasten filetype
 	take_over_my_home = false,
+	auto_set_filetype = false,
 
 	-- markdown file extension
 	extension = ".md",
@@ -35,7 +37,13 @@ require("telekasten").setup({
 	-- command palette theme: dropdown (window) or ivy (bottom panel)
 	command_palette_theme = "ivy",
 
+	-- Don't put subdirs in new links
 	subdirs_in_links = false,
+
+	-- same_as_current: put all new notes in the dir of the current note if
+	--                        present or else in home
+	--                        except for notes/with/subdirs/in/title.
+	new_note_location = "same_as_current",
 
 	-- image link style
 	-- wiki:     ![[image name]]
@@ -66,13 +74,13 @@ require("telekasten").setup({
 lvim.builtin.which_key.mappings["z"] = {
 	name = "Telekasten",
 	f = { "<cmd>lua require('telekasten').find_notes()<cr>", "Find note" },
-	g = { "<cmd>lua require('telekasten').search_notes()<cr>", "Search notes" },
+	s = { "<cmd>lua require('telekasten').search_notes()<cr>", "Search notes" },
 	z = { "<cmd>lua require('telekasten').follow_link()<cr>", "Follow link" },
 	T = { "<cmd>lua require('telekasten').goto_today()<cr>", "Go to today" },
 	n = { "<cmd>lua require('telekasten').new_note()<cr>", "New note" },
 	t = { "<cmd>lua require('telekasten').new_templated_note()<cr>", "New templated note" },
 	p = { "<cmd>lua require('telekasten').panel()<cr>", "Panel" },
-	l = { "<cmd>lua require('telekasten').insert_link()<cr>", "Insert link" },
+	i = { "<cmd>lua require('telekasten').insert_link()<cr>", "Insert link" },
 }
 
 vim.api.nvim_set_keymap("i", "[[", "<ESC>:lua require('telekasten').insert_link()<CR>", { noremap = true })
