@@ -50,6 +50,9 @@ require("telekasten").setup({
 	-- markdown: ![](image_subdir/xxxxx.png)
 	image_link_style = "markdown",
 
+	-- tag notation: '#tag', ':tag:', 'yaml-bare'
+	tag_notation = "yaml-bare",
+
 	-- make syntax available to markdown buffers and telescope previewers
 	install_syntax = true,
 
