@@ -7,7 +7,6 @@ autosave.setup({
 	events = { "InsertLeave", "TextChanged" },
 	conditions = {
 		exists = true,
-		filename_is_not = {},
 		filetype_is_not = { "markdown" },
 		modifiable = true,
 	},
@@ -17,7 +16,7 @@ autosave.setup({
 	debounce_delay = 135,
 })
 
--- F5 Keymap to toggle autosave
-vim.api.nvim_set_keymap("n", "<F5>", "autosave#toggle()", { noremap = true, silent = true })
+-- F4 Keymap to toggle autosave
+vim.api.nvim_set_keymap("n", "<F4>", ":ASToggle<CR>", { noremap = true })
 
 return autosave
