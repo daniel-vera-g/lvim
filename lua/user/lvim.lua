@@ -12,3 +12,4 @@ lvim.foldmethod = "syntax"
 
 lvim.builtin.dashboard.active = true
 lvim.builtin.dap.active = true
+lvim.lsp.diagnostics.virtual_text = false
