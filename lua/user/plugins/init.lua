@@ -32,9 +32,13 @@ lvim.plugins = {
 	},
 
 	--  Colorschemes
+	--- Dark
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
 	{ "catppuccin/nvim", as = "catppuccin" },
+	-- Optional Light themes to use
+	{ "NLKNguyen/papercolor-theme" },
+	{ "junegunn/seoul256.vim" },
 
 	-- Github stuff
 	{ "github/copilot.vim" },
