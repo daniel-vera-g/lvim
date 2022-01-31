@@ -51,3 +51,10 @@ lvim.builtin.which_key.mappings["w"] = {
 	"<cmd>:wa<CR>",
 	"Save All",
 }
+
+-- Save all and quit instead of quitting without saving
+-- Also save the state of all buffers to be able to restore it later
+lvim.builtin.which_key.mappings["q"] = {
+	"<cmd>:wqall<CR>",
+	"Save All and Quit",
+}

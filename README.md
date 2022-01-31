@@ -2,13 +2,12 @@
 
 > My [Lunarvim](https://www.lunarvim.org/) config files
 
-![Screenshoot](./docs/lunarvim.png) 
+![Screenshoot](./docs/lunarvim.png)
 
 ## Install
 
-> `git clone git@github.com:daniel-vera-g/lvim.git ~/.config/lvim/`
-
-I use the nightly Neovim built. Running `./updateLunar.sh` installs the latest Neovim as Appimage, updates Lunarvim and installs/updates Plugins. As always, check the script for yourself before running ✌
+1. Install Neovim nightly
+2. `git clone git@github.com:daniel-vera-g/lvim.git ~/.config/lvim/`
 
 ## Structure
 

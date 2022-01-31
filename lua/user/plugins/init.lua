@@ -32,9 +32,13 @@ lvim.plugins = {
 	},
 
 	--  Colorschemes
+	--- Dark
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
 	{ "catppuccin/nvim", as = "catppuccin" },
+	-- Optional Light themes to use
+	{ "NLKNguyen/papercolor-theme" },
+	{ "junegunn/seoul256.vim" },
 
 	-- Github stuff
 	{ "github/copilot.vim" },
@@ -119,4 +123,5 @@ return {
 	lsp_signature = require("user.plugins.lsp_signature_config"),
 	persistence = require("user.plugins.persistence_config"),
 	telekasten = require("user.plugins.telekasten_config"),
+	clipboard_image = require("user.plugins.clipboard_image_config"),
 }
