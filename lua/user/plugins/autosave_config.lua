@@ -4,10 +4,13 @@ local autosave = require("autosave")
 autosave.setup({
 	enabled = true,
 	execution_message = "",
-	events = { "InsertLeave", "TextChanged" },
+	-- Full list of events: https://tech.saigonist.com/b/code/list-all-vim-script-events.html
+	-- Example: events = { "InsertLeave", "TextChanged" },
+	-- Save, when changing the buffer. Otherwise, save manually to f.ex format the buffer.
+	events = { "BufLeave" },
 	conditions = {
 		exists = true,
-		filetype_is_not = { "" },
+		filetype_is_not = { "markdown" },
 		modifiable = true,
 	},
 	write_all_buffers = true,
