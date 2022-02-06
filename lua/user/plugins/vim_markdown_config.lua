@@ -11,6 +11,8 @@ vim.g.vim_markdown_frontmatter = 1
 vim.g.vim_markdown_json_frontmatter = 1
 vim.g.vim_markdown_strikethrough = 1
 
+vim.g.vim_markdown_toc_autofit = 1
+
 -- Don't mess with indentation in bulletlists
 -- Found here: https://stackoverflow.com/a/46937498/7507544
 vim.g.vim_markdown_new_list_item_indent = 0
