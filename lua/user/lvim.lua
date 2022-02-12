@@ -1,16 +1,22 @@
 local helpers = require("user.helpers.helper")
 local get_basename = helpers.get_cwd
+local autosave = require("autosave")
 
 lvim.format_on_save = true
 lvim.lint_on_save = true
 
 if get_basename() == "foam-knowledge" then
 	lvim.colorscheme = "catppuccin"
+	autosave.setup({
+		conditions = {
+			filetype_is_not = { "markdown" },
+		},
+	})
 else
 	lvim.colorscheme = "tokyonight"
 end
 
--- TODO use in summer or when sun is shining
+-- TODO use in summer or when sun is shining ☀️
 -- if is_light() and get_cwd() ==  then
 -- 	vim.o.background = "light"
 -- 	lvim.colorscheme = "PaperColor"
