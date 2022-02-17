@@ -14,7 +14,7 @@ lvim.plugins = {
 		"ray-x/lsp_signature.nvim",
 		event = "BufRead",
 		config = function()
-			require("lsp_signature").on_attach()
+			require("lsp_signature").setup()
 		end,
 	},
 	-- a tree like view for symbols

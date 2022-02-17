@@ -86,4 +86,4 @@ lvim.builtin.which_key.mappings["z"] = {
 	i = { "<cmd>lua require('telekasten').insert_link()<cr>", "Insert link" },
 }
 
-vim.api.nvim_set_keymap("i", "[[", "<ESC>:lua require('telekasten').insert_link()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("i", "i[", "<ESC>:lua require('telekasten').insert_link()<CR>", { noremap = true })

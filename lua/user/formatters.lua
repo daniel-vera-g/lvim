@@ -17,4 +17,8 @@ formatters.setup({
 		exe = "stylua",
 		filetypes = { "lua" },
 	},
+	{
+		exe = "prettier",
+		filetypes = { "javascript", "typescript", "json" },
+	},
 })
