@@ -5,12 +5,12 @@ autosave.setup({
 	enabled = true,
 	execution_message = "",
 	-- Full list of events: https://tech.saigonist.com/b/code/list-all-vim-script-events.html
-	-- Example: events = { "InsertLeave", "TextChanged" },
-	-- Save, when changing the buffer. Otherwise, save manually to f.ex format the buffer.
-	events = { "BufLeave" },
+	-- Example: Save, when changing the buffer. Otherwise, save manually to f.ex format the buffer.
+	-- events = { "BufLeave" },
+	events = { "InsertLeave", "TextChanged" },
 	conditions = {
 		exists = true,
-		filetype_is_not = { "markdown" },
+		filetype_is_not = { "" },
 		modifiable = true,
 	},
 	write_all_buffers = true,
