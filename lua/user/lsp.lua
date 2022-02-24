@@ -1,4 +1,4 @@
 -- LSP overrides
 
-local opts = { autostart = false }
-require("lvim.lsp.manager").setup("grammarly", opts)
+-- local opts = { autostart = true }
+-- require("lvim.lsp.manager").setup("grammarly")
