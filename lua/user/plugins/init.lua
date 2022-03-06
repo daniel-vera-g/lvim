@@ -6,7 +6,7 @@ lvim.plugins = {
 			require("go").setup()
 		end,
 	},
-	{ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
+	-- { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
 
 	-- LSP related
 	-- Cool signatures while typing
@@ -42,19 +42,19 @@ lvim.plugins = {
 
 	-- Github stuff
 	{ "github/copilot.vim" },
-	{
-		"pwntester/octo.nvim",
-		config = function()
-			require("octo").setup()
-		end,
-	},
+	-- {
+	-- 	"pwntester/octo.nvim",
+	-- 	config = function()
+	-- 		require("octo").setup()
+	-- 	end,
+	-- },
 
 	-- Utils
-	{ "jbyuki/venn.nvim" },
+	-- { "jbyuki/venn.nvim" },
 	{ "Pocco81/AutoSave.nvim" },
 	{ "tpope/vim-surround" },
 	{ "machakann/vim-highlightedyank" },
-	{ "folke/zen-mode.nvim" },
+	-- { "folke/zen-mode.nvim" },
 	{ "folke/twilight.nvim" },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{
@@ -114,11 +114,11 @@ return {
 	dashboard = require("user.plugins.dashboard_config"),
 	-- wiki = require("user.plugins.wiki_config"),
 	autosave = require("user.plugins.autosave_config"),
-	zen_mode = require("user.plugins.zen_mode_config"),
-	twilight = require("user.plugins.twilight_config"),
+	-- zen_mode = require("user.plugins.zen_mode_config"),
+	-- twilight = require("user.plugins.twilight_config"),
 	catppuccino = require("user.plugins.catppuccino_config"),
 	luaSnip = require("user.plugins.luaSnip_config"),
-	venn = require("user.plugins.venn_config"),
+	-- venn = require("user.plugins.venn_config"),
 	copilot = require("user.plugins.copilot_config"),
 	lsp_signature = require("user.plugins.lsp_signature_config"),
 	persistence = require("user.plugins.persistence_config"),
