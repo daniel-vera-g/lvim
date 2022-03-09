@@ -36,6 +36,7 @@ lvim.plugins = {
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
 	{ "catppuccin/nvim", as = "catppuccin" },
+	{ "lalitmee/cobalt2.nvim", requires = "tjdevries/colorbuddy.nvim" },
 	-- Optional Light themes to use
 	{ "NLKNguyen/papercolor-theme" },
 	{ "junegunn/seoul256.vim" },
