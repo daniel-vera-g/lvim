@@ -10,4 +10,4 @@ vim.opt.ai = true -- Auto indent
 vim.opt.cmdheight = 1
 vim.opt.relativenumber = true
 vim.opt.wrap = true
-vim.opt.spell = true
+vim.opt.spell = false

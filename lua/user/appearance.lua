@@ -13,7 +13,8 @@ end
 
 -- Use when the sun is shining ☀️
 local is_light = helpers.is_light
-if is_light() then
+local deactivate_light = true
+if is_light() and not deactivate_light then
 	vim.o.background = "light"
 	lvim.colorscheme = "PaperColor"
 else
