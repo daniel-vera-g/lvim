@@ -8,7 +8,7 @@ lvim.leader = ","
 
 lvim.foldmethod = "syntax"
 
-lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
 lvim.builtin.dap.active = true
 lvim.lsp.diagnostics.virtual_text = true
 
