@@ -72,7 +72,7 @@ lvim.plugins = {
 	-- Using telekasten currently as daily driver :-)
 	-- { "lervag/wiki.vim" },
 	{ "renerocksai/telekasten.nvim" },
-	{ "plasticboy/vim-markdown" },
+	{ "preservim/vim-markdown" },
 	{ "godlygeek/tabular" },
 	{ "dkarter/bullets.vim" },
 	{
