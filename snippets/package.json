@@ -8,10 +8,10 @@
       {
         "language": [
           "plaintext",
-          "markdown",
+          "markdown"
         ],
         "path": "./markdown.json"
-      },
+      }
     ]
   }
 }
