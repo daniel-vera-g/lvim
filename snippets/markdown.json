@@ -1,49 +1,48 @@
 {
-  "Insert Snippets link": {
+  "Insert Wikilink": {
     "scope": "markdown",
-    "prefix": "fl",
-    "body": [
-      "[[$1]]$0"
-    ],
+    "prefix": "wl",
+    "body": ["[[$1]]$0"],
     "description": "Insert a foam link."
   },
   "Simple markdown link": {
     "scope": "markdown",
     "prefix": "sl",
-    "body": [
-      "<$1>$0"
-    ],
+    "body": ["<$1>$0"],
     "description": "Insert a simple markdown link."
+  },
+  "TODO Box": {
+    "scope": "markdown",
+    "prefix": "todo",
+    "body": ["- [ ] $0"],
+    "description": "Insert a TODO box."
+  },
+  "Insert the current DATE in YYYY-MM-DD format": {
+    "scope": "markdown",
+    "prefix": "date",
+    "body": ["$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"],
+    "description": "Insert the current DATE in YYYY-MM-DD format."
   },
   "Textidote ignore begin": {
     "scope": "markdown",
     "prefix": "tib",
-    "body": [
-      "<!-- textidote: ignore begin -->"
-    ],
+    "body": ["<!-- textidote: ignore begin -->"],
     "description": "Textidote ignore next lines."
   },
   "Textidote ignore end": {
     "scope": "markdown",
     "prefix": "tie",
-    "body": [
-      "<!-- textidote: ignore end -->"
-    ],
+    "body": ["<!-- textidote: ignore end -->"],
     "description": "Textidote end ignore session."
   },
   "Insert footnote": {
     "prefix": "ifn",
-    "body": [
-      "[^$1]$0"
-    ],
+    "body": ["[^$1]$0"],
     "description": "Insert a footnote in the current text flow"
   },
   "Insert footnote content": {
     "prefix": "ifc",
-    "body": [
-      "[^$1]: $2$0"
-    ],
+    "body": ["[^$1]: $2$0"],
     "description": "Insert the content of a footnote."
   }
 }
-
