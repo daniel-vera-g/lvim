@@ -37,7 +37,8 @@ lvim.plugins = {
 	{ "folke/tokyonight.nvim" },
 	{ "catppuccin/nvim", as = "catppuccin" },
 	{ "lalitmee/cobalt2.nvim", requires = "tjdevries/colorbuddy.nvim" },
-	{ "cpea2506/one_monokai.nvim" },
+	-- Alternative: https://github.com/cpea2506/one_monokai.nvim
+	{ "tanvirtin/monokai.nvim" },
 	-- Optional Light themes to use
 	{ "NLKNguyen/papercolor-theme" },
 	{ "junegunn/seoul256.vim" },
