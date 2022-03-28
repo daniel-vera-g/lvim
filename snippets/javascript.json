@@ -1,0 +1,7 @@
+{
+  "Log a JSON Object": {
+    "prefix": "lj",
+    "body": "console.log(JSON.stringify($1, null, 4))$0",
+    "description": "Log a JSON Object"
+  }
+}
