@@ -11,14 +11,10 @@ formatters.setup({
 	},
 	{
 		exe = "prettier",
-		filetypes = { "markdown", "md", "javascript", "json" },
+		filetypes = { "markdown", "md", "javascript", "json", "typescript" },
 	},
 	{
 		exe = "stylua",
 		filetypes = { "lua" },
-	},
-	{
-		exe = "prettier",
-		filetypes = { "javascript", "typescript", "json" },
 	},
 })
