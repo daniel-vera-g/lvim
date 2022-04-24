@@ -10,4 +10,22 @@ vim.opt.ai = true -- Auto indent
 vim.opt.cmdheight = 1
 vim.opt.relativenumber = true
 vim.opt.wrap = true
-vim.opt.spell = false
+
+-- Spell related config
+local isSpellOn = true
+vim.opt.spelllang = "en_us,de_de"
+-- To download spell files
+lvim.builtin.nvimtree.setup.disable_netrw = false
+-- Overwrite auto commands
+if isSpellOn == false then
+	lvim.autocommands.custom_groups = {
+		{ "FileType", "markdown", "set nospell" },
+		{ "FileType", "markdown", "setlocal nospell" },
+	}
+else
+	vim.opt.spell = isSpellOn
+	-- Otherwise the first file does not get spell checked
+	lvim.autocommands.custom_groups = {
+		{ "BufWinEnter", "*.md", "set spell" },
+	}
+end
