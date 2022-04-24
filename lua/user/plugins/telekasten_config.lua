@@ -32,7 +32,7 @@ require("telekasten").setup({
 
 	-- template for newly created weekly notes (goto_thisweek)
 	-- set to `nil` or do not specify if you do not want a template
-	-- template_new_weekly= home .. '/' .. 'templates/weekly.md',
+	template_new_weekly = home .. "/" .. "templates/weekly.md",
 
 	-- command palette theme: dropdown (window) or ivy (bottom panel)
 	command_palette_theme = "ivy",
