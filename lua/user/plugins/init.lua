@@ -57,8 +57,8 @@ lvim.plugins = {
 	{ "Pocco81/AutoSave.nvim" },
 	{ "tpope/vim-surround" },
 	{ "machakann/vim-highlightedyank" },
-	-- { "folke/zen-mode.nvim" },
-	{ "folke/twilight.nvim" },
+	{ "folke/zen-mode.nvim" },
+	-- { "folke/twilight.nvim" },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{
 		"folke/persistence.nvim",
