@@ -6,6 +6,7 @@ lvim.plugins = {
 			require("go").setup()
 		end,
 	},
+	-- Debugger if needed...
 	-- { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
 
 	-- LSP related
@@ -45,6 +46,7 @@ lvim.plugins = {
 
 	-- Github stuff
 	{ "github/copilot.vim" },
+	-- GitHub TUI for vim...
 	-- {
 	-- 	"pwntester/octo.nvim",
 	-- 	config = function()
@@ -57,8 +59,8 @@ lvim.plugins = {
 	{ "Pocco81/AutoSave.nvim" },
 	{ "tpope/vim-surround" },
 	{ "machakann/vim-highlightedyank" },
-	-- { "folke/zen-mode.nvim" },
-	{ "folke/twilight.nvim" },
+	{ "folke/zen-mode.nvim" },
+	-- { "folke/twilight.nvim" },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{
 		"folke/persistence.nvim",
@@ -67,6 +69,9 @@ lvim.plugins = {
 		config = function()
 			require("persistence").setup()
 		end,
+	},
+	{
+		"gelguy/wilder.nvim",
 	},
 
 	-- Markdown related
@@ -82,6 +87,10 @@ lvim.plugins = {
 		ft = "markdown",
 	},
 	{ "ekickx/clipboard-image.nvim" },
+	{
+		"jakewvincent/mkdnflow.nvim",
+		branch = "dev",
+	},
 
 	-- Git
 	{
@@ -116,6 +125,7 @@ return {
 	fugitive = require("user.plugins.fugitive_config"),
 	dashboard = require("user.plugins.dashboard_config"),
 	-- wiki = require("user.plugins.wiki_config"),
+	mkdnflow = require("user.plugins.mkdnflow_config"),
 	autosave = require("user.plugins.autosave_config"),
 	-- zen_mode = require("user.plugins.zen_mode_config"),
 	-- twilight = require("user.plugins.twilight_config"),
@@ -127,4 +137,5 @@ return {
 	persistence = require("user.plugins.persistence_config"),
 	telekasten = require("user.plugins.telekasten_config"),
 	clipboard_image = require("user.plugins.clipboard_image_config"),
+	wilder = require("user.plugins.wilder_config"),
 }
