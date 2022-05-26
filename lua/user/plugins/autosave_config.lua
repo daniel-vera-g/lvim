@@ -10,7 +10,7 @@ autosave.setup({
 	events = { "InsertLeave", "TextChanged" },
 	conditions = {
 		exists = true,
-		filetype_is_not = { "markdown" },
+		-- filetype_is_not = { "markdown" },
 		modifiable = true,
 	},
 	write_all_buffers = true,
