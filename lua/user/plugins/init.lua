@@ -114,7 +114,6 @@ return {
 	vim_markdown_preview = require("user.plugins.vim_markdown_preview_config"),
 	terminal = require("user.plugins.terminal_config"),
 	fugitive = require("user.plugins.fugitive_config"),
-	dashboard = require("user.plugins.dashboard_config"),
 	-- wiki = require("user.plugins.wiki_config"),
 	autosave = require("user.plugins.autosave_config"),
 	-- zen_mode = require("user.plugins.zen_mode_config"),
