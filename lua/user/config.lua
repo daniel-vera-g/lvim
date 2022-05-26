@@ -11,6 +11,9 @@ vim.opt.cmdheight = 1
 vim.opt.relativenumber = true
 vim.opt.wrap = true
 
+-- TODO check, as this only work for the current buffer
+-- When opening a new buffer, the spelling keeps being on
+
 -- Spell related config
 local isSpellOn = false
 vim.opt.spell = isSpellOn
@@ -21,13 +24,31 @@ lvim.builtin.nvimtree.setup.disable_netrw = false
 -- Customization for markdown
 -- Overwrite auto commands
 if isSpellOn == false then
-	lvim.autocommands.custom_groups = {
-		{ "FileType", "markdown", "set nospell" },
-		{ "FileType", "markdown", "setlocal nospell" },
+	lvim.autocmds = {
+		{
+			"FileType",
+			{
+				pattern = "markdown",
+				command = "set nospell",
+			},
+		},
+		{
+			"FileType",
+			{
+				pattern = "markdown",
+				command = "setlocal nospell",
+			},
+		},
 	}
 else
 	-- Otherwise the first file does not get spell checked
-	lvim.autocommands.custom_groups = {
-		{ "BufWinEnter", "*.md", "set spell" },
+	lvim.autocmds = {
+		{
+			"BufWinEnter",
+			{
+				pattern = { "*.md" },
+				command = "set spell",
+			},
+		},
 	}
 end
