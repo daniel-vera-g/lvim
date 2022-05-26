@@ -12,10 +12,13 @@ vim.opt.relativenumber = true
 vim.opt.wrap = true
 
 -- Spell related config
-local isSpellOn = true
+local isSpellOn = false
+vim.opt.spell = isSpellOn
 vim.opt.spelllang = "en_us,de_de"
 -- To download spell files
 lvim.builtin.nvimtree.setup.disable_netrw = false
+
+-- Customization for markdown
 -- Overwrite auto commands
 if isSpellOn == false then
 	lvim.autocommands.custom_groups = {
@@ -23,7 +26,6 @@ if isSpellOn == false then
 		{ "FileType", "markdown", "setlocal nospell" },
 	}
 else
-	vim.opt.spell = isSpellOn
 	-- Otherwise the first file does not get spell checked
 	lvim.autocommands.custom_groups = {
 		{ "BufWinEnter", "*.md", "set spell" },
