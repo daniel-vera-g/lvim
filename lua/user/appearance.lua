@@ -19,8 +19,6 @@ end
 
 local get_basename = helpers.get_cwd
 if get_basename() == "foam-knowledge" then
-	-- require("monokai").setup({})
-	lvim.colorscheme = "codemonkey"
 	-- Format when leaving the buffer to not mess with markdown lists when swtiching between normal/insert mode
 	autosave.setup({
 		events = { "BufEnter" },
