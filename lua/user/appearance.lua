@@ -1,4 +1,5 @@
 local autosave = require("autosave")
+local clipboard = require("clipboard-image")
 local helpers = require("user.helpers.helper")
 
 -- Colorscheme customisations
@@ -22,6 +23,14 @@ if get_basename() == "foam-knowledge" then
 	-- Format when leaving the buffer to not mess with markdown lists when swtiching between normal/insert mode
 	autosave.setup({
 		events = { "BufEnter" },
+	})
+
+	-- Root attachment folder
+	clipboard.setup({
+		markdown = {
+			img_dir = "attachments",
+			img_dir_txt = "/attachments",
+		},
 	})
 end
 
