@@ -44,5 +44,10 @@
     "prefix": "ifc",
     "body": ["[^$1]: $2$0"],
     "description": "Insert the content of a footnote."
+  },
+  "Inline Math": {
+    "prefix": ["mathinline", "\\mathinline"],
+    "body": ["\\$$1\\$$0"],
+    "description": "Insert inline Math Environment."
   }
 }
