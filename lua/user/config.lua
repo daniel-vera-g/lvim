@@ -15,7 +15,7 @@ vim.opt.wrap = true
 -- When opening a new buffer, the spelling keeps being on
 
 -- Spell related config
-local isSpellOn = false
+local isSpellOn = true
 vim.opt.spell = isSpellOn
 vim.opt.spelllang = "en_us,de_de"
 -- To download spell files
