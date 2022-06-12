@@ -17,4 +17,5 @@
 -- end
 
 -- Using: https://www.lunarvim.org/plugins/02-extra-plugins.html#copilot-lua-and-copilot-cmp
-table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
+lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
