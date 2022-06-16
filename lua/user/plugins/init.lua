@@ -102,6 +102,7 @@ lvim.plugins = {
 		end,
 		ft = { "markdown" },
 	},
+	{ "ellisonleao/glow.nvim", branch = "main" },
 	{ "ekickx/clipboard-image.nvim" },
 	{
 		"jakewvincent/mkdnflow.nvim",
@@ -153,4 +154,6 @@ return {
 	telekasten = require("user.plugins.telekasten_config"),
 	clipboard_image = require("user.plugins.clipboard_image_config"),
 	wilder = require("user.plugins.wilder_config"),
+	neovide = require("user.plugins.neovide"),
+	glow = require("user.plugins.glow"),
 }
