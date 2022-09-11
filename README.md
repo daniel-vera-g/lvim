@@ -2,7 +2,7 @@
 
 > My [Lunarvim](https://www.lunarvim.org/) config files
 
-![Screenshoot](./docs/lunarvim.png)
+![Screenshot](./docs/lunarvim.png)
 
 ## Install
 
