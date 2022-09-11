@@ -1,3 +1,4 @@
 **/plugin/**
 sessions
 **/spell/**
+.DS_Store
