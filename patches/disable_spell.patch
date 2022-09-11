@@ -1,0 +1,13 @@
+diff --git a/lua/lvim/core/autocmds.lua b/lua/lvim/core/autocmds.lua
+index f5c6358..a67b57f 100644
+--- a/lua/lvim/core/autocmds.lua
++++ b/lua/lvim/core/autocmds.lua
+@@ -46,7 +46,7 @@ function M.load_defaults()
+       {
+         group = "_filetype_settings",
+         pattern = { "gitcommit", "markdown" },
+-        command = "setlocal wrap spell",
++        command = "setlocal wrap",
+       },
+     },
+     {
