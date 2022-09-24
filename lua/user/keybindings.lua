@@ -30,6 +30,12 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Exit insert mode fast
+keymap("i", "jk", "<esc>", { noremap = true, silent = true })
+keymap("i", "kj", "<esc>", { noremap = true, silent = true })
+keymap("v", "jk", "<esc>", { noremap = true, silent = true })
+keymap("v", "kj", "<esc>", { noremap = true, silent = true })
+
 ---------------------
 -- Which Key bindings
 ---------------------
