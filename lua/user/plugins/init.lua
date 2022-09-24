@@ -1,11 +1,12 @@
 lvim.plugins = {
 	-- languages
-	{
-		"ray-x/go.nvim",
-		config = function()
-			require("go").setup()
-		end,
-	},
+	-- TODO: Disable to fix select language server
+	-- {
+	-- 	"ray-x/go.nvim",
+	-- 	config = function()
+	-- 		require("go").setup()
+	-- 	end,
+	-- },
 	-- Debugger if needed...
 	-- { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
 
@@ -69,7 +70,7 @@ lvim.plugins = {
 
 	-- Utils
 	-- { "jbyuki/venn.nvim" },
-	{ "Pocco81/AutoSave.nvim" },
+	{ "Pocco81/auto-save.nvim" },
 	{ "tpope/vim-surround" },
 	{ "machakann/vim-highlightedyank" },
 	{ "folke/zen-mode.nvim" },
@@ -104,10 +105,10 @@ lvim.plugins = {
 	},
 	{ "ellisonleao/glow.nvim", branch = "main" },
 	{ "ekickx/clipboard-image.nvim" },
-	{
-		"jakewvincent/mkdnflow.nvim",
-		branch = "dev",
-	},
+	-- {
+	-- 	"jakewvincent/mkdnflow.nvim",
+	-- 	branch = "dev",
+	-- },
 
 	-- Git
 	{
@@ -141,7 +142,7 @@ return {
 	terminal = require("user.plugins.terminal_config"),
 	fugitive = require("user.plugins.fugitive_config"),
 	-- wiki = require("user.plugins.wiki_config"),
-	mkdnflow = require("user.plugins.mkdnflow_config"),
+	-- mkdnflow = require("user.plugins.mkdnflow_config"),
 	autosave = require("user.plugins.autosave_config"),
 	-- zen_mode = require("user.plugins.zen_mode_config"),
 	-- twilight = require("user.plugins.twilight_config"),

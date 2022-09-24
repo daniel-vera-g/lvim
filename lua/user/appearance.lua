@@ -1,4 +1,4 @@
-local autosave = require("autosave")
+local autosave = require("auto-save")
 local clipboard = require("clipboard-image")
 local helpers = require("user.helpers.helper")
 
@@ -22,7 +22,7 @@ local get_basename = helpers.get_cwd
 if get_basename() == "foam-knowledge" then
 	-- Format when leaving the buffer to not mess with markdown lists when swtiching between normal/insert mode
 	autosave.setup({
-		events = { "BufEnter" },
+		trigger_events = { "BufEnter" },
 	})
 
 	-- Root attachment folder
