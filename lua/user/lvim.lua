@@ -13,6 +13,6 @@ lvim.builtin.dap.active = false
 lvim.lsp.diagnostics.virtual_text = true
 
 --- Silence deprecation notice
-lvim.builtin.dashboard.active = false
+lvim.builtin.alpha.active = false
 
 require("user.appearance")
