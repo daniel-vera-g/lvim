@@ -9,10 +9,16 @@ lvim.leader = ","
 lvim.foldmethod = "syntax"
 
 lvim.builtin.alpha.active = true
+lvim.builtin.alpha.mode = "dashboard"
+
+lvim.builtin.terminal.active = true
+lvim.builtin.terminal.open_mapping = "<C-t>"
+
 lvim.builtin.dap.active = false
+
 lvim.lsp.diagnostics.virtual_text = true
 
---- Silence deprecation notice
-lvim.builtin.alpha.active = false
+lvim.colorscheme = "catppuccin"
 
-require("user.appearance")
+-- Some manual code adjustments for Lvim...
+require("user.helpers.helper")

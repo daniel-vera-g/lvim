@@ -2,7 +2,7 @@ local autosave = require("auto-save")
 
 -- See: https://github.com/Pocco81/AutoSave.nvim#general
 autosave.setup({
-	enabled = false,
+	enabled = true,
 	execution_message = {
 		message = "",
 	},
