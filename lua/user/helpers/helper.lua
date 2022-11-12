@@ -1,19 +1,32 @@
--- If it's between 9am and 4:30pm, use the light theme
-local function is_light()
-  local hour = os.date("%H%M")
-  return tonumber(hour) >= 900 and tonumber(hour) < 1630
-end
+local autosave = require("auto-save")
+local clipboard = require("clipboard-image")
 
 -- Get current directory name
 local function get_basename()
-  local cwd = vim.fn.getcwd()
-  if cwd == "" then
-    cwd = "~"
-  end
-  return string.match(cwd, "/(%w+[-]*%w+)$")
+	local cwd = vim.fn.getcwd()
+	if cwd == "" then
+		cwd = "~"
+	end
+	return string.match(cwd, "/(%w+[-]*%w+)$")
 end
 
-return {
-  is_light = is_light,
-  get_cwd = get_basename,
-}
+if get_basename() == "foam-knowledge" then
+	-- Format when leaving the buffer to not mess with markdown lists when swtiching between normal/insert mode
+	autosave.setup({
+		trigger_events = { "BufEnter" },
+	})
+
+	-- Root attachment folder
+	clipboard.setup({
+		markdown = {
+			img_dir = "attachments",
+			img_dir_txt = "/attachments",
+		},
+	})
+end
+
+-- ---
+
+-- Workarround, as vim.api does not seem as stable for highlighting
+-- https://www.reddit.com/r/neovim/comments/me35u9/comment/h2x5n7u/
+vim.cmd([[au VimEnter * highlight LineNr guifg=green]])
