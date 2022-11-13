@@ -61,7 +61,7 @@ lvim.plugins = {
 	{ "tpope/vim-surround" },
 	{ "machakann/vim-highlightedyank" },
 	{ "folke/zen-mode.nvim" },
-	-- { "folke/twilight.nvim" },
+	{ "folke/twilight.nvim" },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{
 		"folke/persistence.nvim",
@@ -133,7 +133,7 @@ return {
 	-- mkdnflow = require("user.plugins.mkdnflow_config"),
 	autosave = require("user.plugins.autosave_config"),
 	-- zen_mode = require("user.plugins.zen_mode_config"),
-	-- twilight = require("user.plugins.twilight_config"),
+	twilight = require("user.plugins.twilight_config"),
 	catppuccino = require("user.plugins.catppuccino_config"),
 	luaSnip = require("user.plugins.luaSnip_config"),
 	copilot = require("user.plugins.copilot_config"),
