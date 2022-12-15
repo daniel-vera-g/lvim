@@ -10,8 +10,8 @@ local opts = { noremap = true, silent = true }
 keymap("n", "Y", "yg_", { noremap = true })
 
 -- Some spelling keymaps
-keymap("n", "<F7>", ":set nospell<CR>", { noremap = true })
-keymap("n", "<F8>", ":set spelllang=de spellfile=~/.config/lvim/spell/de.utf-8.add spell<CR>", { noremap = true })
+keymap("n", "<F6>", ":set nospell<CR>", { noremap = true })
+keymap("n", "<F7>", ":set spelllang=de spellfile=~/.config/lvim/spell/de.utf-8.add spell<CR>", { noremap = true })
 
 -- no :ex mode
 vim.cmd("nnoremap Q <nop>")
