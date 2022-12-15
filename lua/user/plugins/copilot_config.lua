@@ -6,7 +6,8 @@ vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""
 local cmp = require("cmp")
 
-lvim.builtin.cmp.mapping["<C-f>"] = function(fallback)
+-- Originally used map: <C-f>
+lvim.builtin.cmp.mapping["<C-a>"] = function(fallback)
 	cmp.mapping.abort()
 	local copilot_keys = vim.fn["copilot#Accept"]()
 	if copilot_keys ~= "" then
