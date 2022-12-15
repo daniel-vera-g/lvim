@@ -10,3 +10,8 @@ vim.opt.ai = true -- Auto indent
 vim.opt.cmdheight = 1
 vim.opt.relativenumber = true
 vim.opt.wrap = true
+
+vim.opt.spelllang = "de,en"
+
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
