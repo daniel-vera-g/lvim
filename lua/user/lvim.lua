@@ -14,7 +14,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.open_mapping = "<C-t>"
 
-lvim.builtin.dap.active = false
+lvim.builtin.dap.active = true
 
 lvim.lsp.diagnostics.virtual_text = true
 
