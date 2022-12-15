@@ -8,8 +8,7 @@ lvim.plugins = {
 			require("go").setup()
 		end,
 	},
-	-- Debugger if needed...
-	{ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
+	{ "towolf/vim-helm" },
 
 	-- LSP related ---
 
