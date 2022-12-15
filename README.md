@@ -37,6 +37,14 @@ Plugin related:
 2. `./snippets/`: Custom snippets in VSCode Format
 3. `./spell/`: Own spell dictionaries
 
+General:
+
+1. `./patches`: Patches for the original LunarVim config
+
+- Get patch: ` git diff > ~/.config/lvim/patches/disable_spell.patch`
+- Apply patch(In `~/.local/share/lunarvim`): `git apply ~/.config/lvim/patches/disable_spell.patch`
+- Remove patch(In `~/.local/share/lunarvim`): `git apply -R ~/.config/lvim/patches/disable_spell.patch`
+
 ## References
 
 Lunarvim:
