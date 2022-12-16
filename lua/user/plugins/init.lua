@@ -46,6 +46,10 @@ lvim.plugins = {
 	-- Optional Light themes to use
 	{ "NLKNguyen/papercolor-theme" },
 	{ "junegunn/seoul256.vim" },
+	{
+		"ramojus/mellifluous.nvim",
+		requires = { "rktjmp/lush.nvim" },
+	},
 
 	--  +++
 	-- Github stuff
@@ -142,4 +146,5 @@ return {
 	clipboard_image = require("user.plugins.clipboard_image_config"),
 	wilder = require("user.plugins.wilder_config"),
 	neovide = require("user.plugins.neovide"),
+	mellifluous = require("user.plugins.mellifluous_config"),
 }

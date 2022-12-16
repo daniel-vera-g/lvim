@@ -18,7 +18,7 @@ lvim.builtin.dap.active = true
 
 lvim.lsp.diagnostics.virtual_text = true
 
-lvim.colorscheme = "catppuccin"
+lvim.colorscheme = "mellifluous"
 
 -- Some manual code adjustments for Lvim...
 require("user.helpers.helper")
