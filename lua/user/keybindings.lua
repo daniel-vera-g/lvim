@@ -34,6 +34,9 @@ keymap("v", ">", ">gv", opts)
 keymap("i", "jk", "<esc>", { noremap = true, silent = true })
 keymap("i", "kj", "<esc>", { noremap = true, silent = true })
 
+lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
+lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
+
 ---------------------
 -- Which Key bindings
 ---------------------
