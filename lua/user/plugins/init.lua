@@ -2,6 +2,7 @@ lvim.plugins = {
 	-- +++
 	-- Languages
 	-- +++
+
 	{
 		"ray-x/go.nvim",
 		config = function()
@@ -10,7 +11,9 @@ lvim.plugins = {
 	},
 	{ "towolf/vim-helm" },
 
-	-- LSP related ---
+	-- +++
+	-- LSP related
+	-- +++
 
 	-- Cool signatures while typing
 	{
@@ -20,11 +23,12 @@ lvim.plugins = {
 			require("lsp_signature").setup()
 		end,
 	},
-	-- -- a tree like view for symbols
+	-- A tree like view for symbols
 	{
 		"simrat39/symbols-outline.nvim",
 		cmd = "SymbolsOutline",
 	},
+	--
 	-- Diagnostics, references, telescope results, ...
 	{
 		"folke/trouble.nvim",
@@ -37,6 +41,7 @@ lvim.plugins = {
 	--  +++
 	--  Colorschemes
 	--  +++
+
 	--- Dark
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
@@ -54,8 +59,10 @@ lvim.plugins = {
 	--  +++
 	-- Github stuff
 	--  +++
+
 	-- Official alternative
-	{ "github/copilot.vim" },
+	--	{ "github/copilot.vim" },
+	{ "zbirenbaum/copilot.lua" },
 
 	-- +++
 	-- Utils
@@ -78,9 +85,7 @@ lvim.plugins = {
 		"gelguy/wilder.nvim", -- Better Wildmenu
 	},
 
-	-- +++
-	-- Markdown related
-	-- +++
+	-- Markdown related --
 	-- Using telekasten currently as daily driver :-)
 	-- { "lervag/wiki.vim" },
 	{ "renerocksai/telekasten.nvim" },
@@ -132,14 +137,12 @@ return {
 	vim_markdown = require("user.plugins.vim_markdown_config"),
 	vim_markdown_preview = require("user.plugins.vim_markdown_preview_config"),
 	fugitive = require("user.plugins.fugitive_config"),
-	-- wiki = require("user.plugins.wiki_config"),
 	-- mkdnflow = require("user.plugins.mkdnflow_config"),
 	autosave = require("user.plugins.autosave_config"),
 	-- zen_mode = require("user.plugins.zen_mode_config"),
 	twilight = require("user.plugins.twilight_config"),
 	catppuccino = require("user.plugins.catppuccino_config"),
 	luaSnip = require("user.plugins.luaSnip_config"),
-	copilot = require("user.plugins.copilot_config"),
 	lsp_signature = require("user.plugins.lsp_signature_config"),
 	persistence = require("user.plugins.persistence_config"),
 	telekasten = require("user.plugins.telekasten_config"),

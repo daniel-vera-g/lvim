@@ -6,7 +6,7 @@
 
 ## Install
 
-1. Install Neovim nightly
+1. Install Neovim
 2. `git clone git@github.com:daniel-vera-g/lvim.git ~/.config/lvim/`
 
 ## Structure
