@@ -18,7 +18,7 @@ lvim.builtin.dap.active = true
 
 lvim.lsp.diagnostics.virtual_text = true
 
-lvim.colorscheme = "mellifluous"
+lvim.colorscheme = "embark"
 
 -- Some manual code adjustments for Lvim...
 require("user.helpers.helper")

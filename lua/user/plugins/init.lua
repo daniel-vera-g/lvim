@@ -46,6 +46,7 @@ lvim.plugins = {
 	{ "lunarvim/colorschemes" },
 	{ "folke/tokyonight.nvim" },
 	{ "catppuccin/nvim", as = "catppuccin" },
+	{ "embark-theme/vim", as = "embark" },
 	-- Alternative: https://github.com/cpea2506/one_monokai.nvim
 	{ "tanvirtin/monokai.nvim" },
 	-- Optional Light themes to use
@@ -61,7 +62,6 @@ lvim.plugins = {
 	--  +++
 
 	-- Official alternative
-	--	{ "github/copilot.vim" },
 	{ "zbirenbaum/copilot.lua" },
 
 	-- +++
@@ -137,9 +137,8 @@ return {
 	vim_markdown = require("user.plugins.vim_markdown_config"),
 	vim_markdown_preview = require("user.plugins.vim_markdown_preview_config"),
 	fugitive = require("user.plugins.fugitive_config"),
-	-- mkdnflow = require("user.plugins.mkdnflow_config"),
 	autosave = require("user.plugins.autosave_config"),
-	-- zen_mode = require("user.plugins.zen_mode_config"),
+	zen_mode = require("user.plugins.zen_mode_config"),
 	twilight = require("user.plugins.twilight_config"),
 	catppuccino = require("user.plugins.catppuccino_config"),
 	luaSnip = require("user.plugins.luaSnip_config"),

@@ -12,7 +12,7 @@ vim.opt.relativenumber = true
 vim.opt.wrap = true
 
 vim.opt.spelllang = "de,en"
-vim.opt.spell = true
+vim.opt.spell = false
 
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
