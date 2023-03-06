@@ -10,6 +10,7 @@ lvim.plugins = {
 		end,
 	},
 	{ "towolf/vim-helm" },
+	{ "rottencandy/vimkubectl" },
 
 	-- +++
 	-- LSP related
