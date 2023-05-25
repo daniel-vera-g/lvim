@@ -7,6 +7,12 @@
     "snippets": [
       {
         "language": [
+          "tex"
+        ],
+        "path": "./latex.json"
+      },
+      {
+        "language": [
           "plaintext",
           "markdown"
         ],
