@@ -44,26 +44,37 @@ lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 -- See: https://github.com/LunarVim/LunarVim/pull/1287
 -- Finding files, this will search all files including the hidden ones, but the folders specified below.
 lvim.builtin.which_key.mappings["f"] = {
-	"<cmd>:lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git', '-g', '!node_modules', '-g', '!.next' }})<CR>",
-	"Find Files",
+  "<cmd>:lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git', '-g', '!node_modules', '-g', '!.next' }})<CR>",
+  "Find Files",
 }
 -- Finding text, this will search all text in all the files in the current workspace including hidden files, but the folders and files specified below.
 lvim.builtin.which_key.mappings["rg"] = {
-	"<cmd>:lua require'telescope.builtin'.live_grep({ vimgrep_arguments = { 'rg', '--hidden','--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', '-u', '-g', '!yarn.lock', '-g', '!.git', '-g', '!node_modules', '-g', '!.next' } })<CR>",
-	"Find Text",
+  "<cmd>:lua require'telescope.builtin'.live_grep({ vimgrep_arguments = { 'rg', '--hidden','--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', '-u', '-g', '!yarn.lock', '-g', '!.git', '-g', '!node_modules', '-g', '!.next' } })<CR>",
+  "Find Text",
 }
 
 -- Save all instead of just current file
 lvim.builtin.which_key.mappings["w"] = {
-	"<cmd>:wa<CR>",
-	"Save All",
+  "<cmd>:wa<CR>",
+  "Save All",
 }
 
 -- Save all and quit instead of quitting without saving
 -- Also save the state of all buffers to be able to restore it later
 lvim.builtin.which_key.mappings["q"] = {
-	"<cmd>:wqall<CR>",
-	"Save All and Quit",
+  "<cmd>:wqall<CR>",
+  "Save All and Quit",
+}
+
+lvim.builtin.which_key.mappings["v"] = {
+  name = "Vimux",
+  p = { "<cmd>VimuxPromptCommand<CR>", "VimuxPromptCommand" },
+  l = { "<cmd>VimuxRunLastCommand<CR>", "Run Last Command" },
+  i = { "<cmd>VimuxInspectRunner<CR>", "Inspect Runner" },
+  q = { "<cmd>VimuxCloseRunner<CR>", "Close Runner" },
+  x = { "<cmd>VimuxInterruptRunner<CR>", "Interrupt Runner" },
+  z = { "<cmd>call VimuxZoomRunner()<CR>", "Zoom Runner" },
+  ["<C-l>"] = { "<cmd>VimuxClearTerminalScreen<CR>", "Clear Terminal Screen" }
 }
 
 ---------------------
@@ -71,11 +82,11 @@ lvim.builtin.which_key.mappings["q"] = {
 ---------------------
 
 lvim.builtin.which_key.mappings["t"] = {
-	name = "+Trouble",
-	r = { "<cmd>Trouble lsp_references<cr>", "References" },
-	f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-	d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
-	q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+  name = "+Trouble",
+  r = { "<cmd>Trouble lsp_references<cr>", "References" },
+  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+  d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
+  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+  w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
