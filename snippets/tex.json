@@ -1,0 +1,25 @@
+{
+  "Textidote ignore begin": {
+    "scope": "tex",
+    "prefix": "tib",
+    "body": [
+      "% textidote: ignore begin"
+    ],
+    "description": "Textidote ignore next lines."
+  },
+  "Textidote ignore end": {
+    "scope": "tex",
+    "prefix": "tie",
+    "body": [
+      "% textidote: ignore end"
+    ],
+    "description": "Textidote end ignore session."
+  },
+  "Textidote ignore end": {
+    "scope": "tex",
+    "prefix": "gld",
+    "body": [
+      "% GLIEDERUNG"
+    ]
+  }
+}
