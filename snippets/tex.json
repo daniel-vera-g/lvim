@@ -13,7 +13,15 @@
     "body": [
       "% textidote: ignore end"
     ],
-    "description": "Textidote end ignore session."
+    "description": "Textidote end ignore lines."
+  },
+  "Code": {
+    "scope": "tex",
+    "prefix": "cd",
+    "body": [
+      "\\code{$1}$0"
+    ],
+    "description": "Code snippet"
   },
   "Textidote ignore end": {
     "scope": "tex",
