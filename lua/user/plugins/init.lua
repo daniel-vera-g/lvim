@@ -23,28 +23,21 @@ lvim.plugins = {
   -- LSP related
   -- +++
 
-  -- Cool signatures while typing
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function()
-      require("lsp_signature").setup()
-    end,
-  },
-  -- A tree like view for symbols
-  {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-  },
-  --
-  -- Diagnostics, references, telescope results, ...
-  {
-    "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup({})
-    end,
-  },
+	--- Dark
+	{ "lunarvim/colorschemes" },
+	{ "folke/tokyonight.nvim" },
+	{ "catppuccin/nvim", as = "catppuccin" },
+	{ "embark-theme/vim", as = "embark" },
+	-- Alternative: https://github.com/cpea2506/one_monokai.nvim
+	{ "tanvirtin/monokai.nvim" },
+	-- Optional Light themes to use
+	{ "NLKNguyen/papercolor-theme" },
+	{ "junegunn/seoul256.vim" },
+	{
+		"ramojus/mellifluous.nvim",
+		requires = { "rktjmp/lush.nvim" },
+	},
+	{ "NTBBloodbath/sweetie.nvim" },
 
   --  +++
   --  Colorschemes
@@ -72,70 +65,77 @@ lvim.plugins = {
   -- Official alternative
   { "zbirenbaum/copilot.lua" },
 
-  -- +++
-  -- Utils
-  -- +++
-  { "Pocco81/AutoSave.nvim" },
+	-- +++
+	-- Utils
+	-- +++
+	{ "skywind3000/asyncrun.vim" },
   { "preservim/vimux" },
-  { "tpope/vim-surround" },
-  { "machakann/vim-highlightedyank" },
-  { "folke/zen-mode.nvim" },
-  { "folke/twilight.nvim" },
-  { "felipec/vim-sanegx", event = "BufRead" },
-  {
-    "folke/persistence.nvim",
-    event = "BufReadPre", -- this will only start session saving when an actual file was opened
-    module = "persistence",
-    config = function()
-      require("persistence").setup()
-    end,
-  },
-  {
-    "gelguy/wilder.nvim", -- Better Wildmenu
-  },
+	{ "Pocco81/AutoSave.nvim" },
+	{ "tpope/vim-surround" },
+	{ "machakann/vim-highlightedyank" },
+	{ "folke/zen-mode.nvim" },
+	{ "folke/twilight.nvim" },
+	{ "felipec/vim-sanegx", event = "BufRead" },
+	{
+		"folke/persistence.nvim",
+		event = "BufReadPre", -- this will only start session saving when an actual file was opened
+		module = "persistence",
+		config = function()
+			require("persistence").setup()
+		end,
+	},
+	{
+		"gelguy/wilder.nvim", -- Better Wildmenu
+	},
 
-  -- Markdown related --
-  -- Using telekasten currently as daily driver :-)
-  -- { "lervag/wiki.vim" },
-  { "renerocksai/telekasten.nvim" },
-  --  Telekasten "alternative"
-  --  {
-  --    "jakewvincent/mkdnflow.nvim",
-  --    branch = "dev",
-  --  },
-  { "preservim/vim-markdown" },
-  { "godlygeek/tabular" },
-  { "dkarter/bullets.vim" },
-  {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
-  },
-  { "ekickx/clipboard-image.nvim" },
-
-  -- Git
-  {
-    "tpope/vim-fugitive",
-    cmd = {
-      "G",
-      "Git",
-      "Gdiffsplit",
-      "Gread",
-      "Gwrite",
-      "Ggrep",
-      "GMove",
-      "GDelete",
-      "GBrowse",
-      "GRemove",
-      "GRename",
-      "Glgrep",
-      "Gedit",
-    },
-    ft = { "fugitive" },
-  },
+	-- Markdown related --
+	-- Using telekasten currently as daily driver :-)
+	-- { "lervag/wiki.vim" },
+	{ "renerocksai/telekasten.nvim" },
+	--  Telekasten "alternative"
+	--  {
+	--    "jakewvincent/mkdnflow.nvim",
+	--    branch = "dev",
+	--  },
+	{ "preservim/vim-markdown" },
+	{ "godlygeek/tabular" },
+	{ "dkarter/bullets.vim" },
+	{
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
+	{ "ekickx/clipboard-image.nvim" },
+	-- TODO test: https://github.com/antonk52/markdowny.nvim
+	{
+		"antonk52/markdowny.nvim",
+		config = function()
+			require("markdowny").setup()
+		end,
+	},
+	-- Git
+	{
+		"tpope/vim-fugitive",
+		cmd = {
+			"G",
+			"Git",
+			"Gdiffsplit",
+			"Gread",
+			"Gwrite",
+			"Ggrep",
+			"GMove",
+			"GDelete",
+			"GBrowse",
+			"GRemove",
+			"GRename",
+			"Glgrep",
+			"Gedit",
+		},
+		ft = { "fugitive" },
+	},
 }
 
 return {

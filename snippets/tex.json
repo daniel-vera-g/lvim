@@ -13,7 +13,7 @@
     "body": [
       "% textidote: ignore end"
     ],
-    "description": "Textidote end ignore session."
+    "description": "Textidote end ignore lines."
   },
   "Code": {
     "scope": "tex",

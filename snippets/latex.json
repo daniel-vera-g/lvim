@@ -1,0 +1,20 @@
+{
+  "Textidote ignore begin": {
+    "prefix": "tib",
+    "body": ["% <!-- textidote: ignore begin -->"],
+    "description": "Textidote ignore next lines."
+  },
+  "Textidote ignore end": {
+    "prefix": "tie",
+    "body": ["% <!-- textidote: ignore end -->"],
+    "description": "Textidote end ignore session."
+  },
+  "GLIEDERUNG": {
+    "prefix": "gld",
+    "body": ["% GLIEDERUNG"]
+  },
+  "TODO": {
+    "prefix": "td",
+    "body": ["% TODO"]
+  }
+}
