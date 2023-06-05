@@ -2,32 +2,28 @@
   "Textidote ignore begin": {
     "scope": "tex",
     "prefix": "tib",
-    "body": [
-      "% textidote: ignore begin"
-    ],
+    "body": ["% textidote: ignore begin"],
     "description": "Textidote ignore next lines."
   },
   "Textidote ignore end": {
     "scope": "tex",
     "prefix": "tie",
-    "body": [
-      "% textidote: ignore end"
-    ],
+    "body": ["% textidote: ignore end"],
     "description": "Textidote end ignore lines."
   },
   "Code": {
     "scope": "tex",
     "prefix": "cd",
-    "body": [
-      "\\code{$1}$0"
-    ],
+    "body": ["\\code{$1}$0"],
     "description": "Code snippet"
   },
-  "Textidote ignore end": {
+  "Gliederung": {
     "scope": "tex",
     "prefix": "gld",
-    "body": [
-      "% GLIEDERUNG"
-    ]
+    "body": ["% GLIEDERUNG"]
+  },
+  "TODO": {
+    "prefix": "td",
+    "body": ["% TODO"]
   }
 }
