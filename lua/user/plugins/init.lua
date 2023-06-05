@@ -1,27 +1,25 @@
 lvim.plugins = {
-  -- +++
-  -- Languages
-  -- +++
+	-- +++
+	-- Languages
+	-- +++
 
-  {
-    "ray-x/go.nvim",
-    config = function()
-      require("go").setup()
-    end,
-  },
-  -- { 'mrjosh/helm-ls',
-  --   requires = {
-  --     { "towolf/vim-helm" },
-  --   } },
-  { "rottencandy/vimkubectl" },
+	{
+		"ray-x/go.nvim",
+		config = function()
+			require("go").setup()
+		end,
+	},
+	-- { 'mrjosh/helm-ls',
+	--   requires = {
+	--     { "towolf/vim-helm" },
+	--   } },
+	{ "rottencandy/vimkubectl" },
 
-  { "weirongxu/plantuml-previewer.vim",
-    requires = { "tyru/open-browser.vim", "aklt/plantuml-syntax" } },
+	{ "weirongxu/plantuml-previewer.vim", requires = { "tyru/open-browser.vim", "aklt/plantuml-syntax" } },
 
-
-  -- +++
-  -- LSP related
-  -- +++
+	-- +++
+	-- LSP related
+	-- +++
 
 	--- Dark
 	{ "lunarvim/colorschemes" },
@@ -39,37 +37,37 @@ lvim.plugins = {
 	},
 	{ "NTBBloodbath/sweetie.nvim" },
 
-  --  +++
-  --  Colorschemes
-  --  +++
+	--  +++
+	--  Colorschemes
+	--  +++
 
-  --- Dark
-  { "lunarvim/colorschemes" },
-  { "folke/tokyonight.nvim" },
-  { "catppuccin/nvim", as = "catppuccin" },
-  { "embark-theme/vim", as = "embark" },
-  -- Alternative: https://github.com/cpea2506/one_monokai.nvim
-  { "tanvirtin/monokai.nvim" },
-  -- Optional Light themes to use
-  { "NLKNguyen/papercolor-theme" },
-  { "junegunn/seoul256.vim" },
-  {
-    "ramojus/mellifluous.nvim",
-    requires = { "rktjmp/lush.nvim" },
-  },
+	--- Dark
+	{ "lunarvim/colorschemes" },
+	{ "folke/tokyonight.nvim" },
+	{ "catppuccin/nvim", as = "catppuccin" },
+	{ "embark-theme/vim", as = "embark" },
+	-- Alternative: https://github.com/cpea2506/one_monokai.nvim
+	{ "tanvirtin/monokai.nvim" },
+	-- Optional Light themes to use
+	{ "NLKNguyen/papercolor-theme" },
+	{ "junegunn/seoul256.vim" },
+	{
+		"ramojus/mellifluous.nvim",
+		requires = { "rktjmp/lush.nvim" },
+	},
 
-  --  +++
-  -- Github stuff
-  --  +++
+	--  +++
+	-- Github stuff
+	--  +++
 
-  -- Official alternative
-  { "zbirenbaum/copilot.lua" },
+	-- Official alternative
+	{ "zbirenbaum/copilot.lua" },
 
 	-- +++
 	-- Utils
 	-- +++
 	{ "skywind3000/asyncrun.vim" },
-  { "preservim/vimux" },
+	{ "preservim/vimux" },
 	{ "Pocco81/AutoSave.nvim" },
 	{ "tpope/vim-surround" },
 	{ "machakann/vim-highlightedyank" },
@@ -136,27 +134,38 @@ lvim.plugins = {
 		},
 		ft = { "fugitive" },
 	},
+	{
+		"pwntester/octo.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("octo").setup()
+		end,
+	},
 }
 
 return {
-  -- Follow the naming to avoid namespace clashes: plugin -> plugin_config
-  bullets = require("user.plugins.bullets_config"),
-  nvimtree = require("user.plugins.nvimtree_config"),
-  treesitter = require("user.plugins.treesitter_config"),
-  vim_markdown = require("user.plugins.vim_markdown_config"),
-  vim_markdown_preview = require("user.plugins.vim_markdown_preview_config"),
-  fugitive = require("user.plugins.fugitive_config"),
-  autosave = require("user.plugins.autosave_config"),
-  zen_mode = require("user.plugins.zen_mode_config"),
-  twilight = require("user.plugins.twilight_config"),
-  catppuccino = require("user.plugins.catppuccino_config"),
-  luaSnip = require("user.plugins.luaSnip_config"),
-  lsp_signature = require("user.plugins.lsp_signature_config"),
-  persistence = require("user.plugins.persistence_config"),
-  telekasten = require("user.plugins.telekasten_config"),
-  clipboard_image = require("user.plugins.clipboard_image_config"),
-  wilder = require("user.plugins.wilder_config"),
-  neovide = require("user.plugins.neovide"),
-  mellifluous = require("user.plugins.mellifluous_config"),
-  -- helm_ls = require("user.plugins.helm_ls_config")
+	-- Follow the naming to avoid namespace clashes: plugin -> plugin_config
+	bullets = require("user.plugins.bullets_config"),
+	nvimtree = require("user.plugins.nvimtree_config"),
+	treesitter = require("user.plugins.treesitter_config"),
+	vim_markdown = require("user.plugins.vim_markdown_config"),
+	vim_markdown_preview = require("user.plugins.vim_markdown_preview_config"),
+	fugitive = require("user.plugins.fugitive_config"),
+	autosave = require("user.plugins.autosave_config"),
+	zen_mode = require("user.plugins.zen_mode_config"),
+	twilight = require("user.plugins.twilight_config"),
+	catppuccino = require("user.plugins.catppuccino_config"),
+	luaSnip = require("user.plugins.luaSnip_config"),
+	lsp_signature = require("user.plugins.lsp_signature_config"),
+	persistence = require("user.plugins.persistence_config"),
+	telekasten = require("user.plugins.telekasten_config"),
+	clipboard_image = require("user.plugins.clipboard_image_config"),
+	wilder = require("user.plugins.wilder_config"),
+	neovide = require("user.plugins.neovide"),
+	mellifluous = require("user.plugins.mellifluous_config"),
+	-- helm_ls = require("user.plugins.helm_ls_config")
 }
