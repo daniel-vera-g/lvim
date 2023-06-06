@@ -9,4 +9,3 @@ reload("user.lsp")
 
 -- Lunarvim configuration
 reload("user.lvim")
-

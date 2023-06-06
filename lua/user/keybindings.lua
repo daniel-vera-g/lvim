@@ -78,7 +78,7 @@ lvim.builtin.which_key.mappings["v"] = {
 }
 
 ---------------------
--- Plugin related keybindings
+-- Plugin related Which Key keybindings
 ---------------------
 
 lvim.builtin.which_key.mappings["t"] = {

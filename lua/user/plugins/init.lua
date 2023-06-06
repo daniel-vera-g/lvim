@@ -1,7 +1,7 @@
 lvim.plugins = {
-  -- +++
+  --
   -- Languages
-  -- +++
+  --
 
   {
     "ray-x/go.nvim",
@@ -9,17 +9,13 @@ lvim.plugins = {
       require("go").setup()
     end,
   },
-  -- { 'mrjosh/helm-ls',
-  --   requires = {
-  --     { "towolf/vim-helm" },
-  --   } },
   { "rottencandy/vimkubectl" },
-
   { "weirongxu/plantuml-previewer.vim", requires = { "tyru/open-browser.vim", "aklt/plantuml-syntax" } },
 
-  -- +++
-  -- LSP related
-  -- +++
+
+  --
+  --  Colorschemes
+  --
 
   --- Dark
   { "lunarvim/colorschemes" },
@@ -37,34 +33,10 @@ lvim.plugins = {
   },
   { "NTBBloodbath/sweetie.nvim" },
 
-  --  +++
-  --  Colorschemes
-  --  +++
-
-  --- Dark
-  { "lunarvim/colorschemes" },
-  { "folke/tokyonight.nvim" },
-  { "catppuccin/nvim", as = "catppuccin" },
-  { "embark-theme/vim", as = "embark" },
-  -- Alternative: https://github.com/cpea2506/one_monokai.nvim
-  { "tanvirtin/monokai.nvim" },
-  -- Optional Light themes to use
-  { "NLKNguyen/papercolor-theme" },
-  { "junegunn/seoul256.vim" },
-  {
-    "ramojus/mellifluous.nvim",
-    requires = { "rktjmp/lush.nvim" },
-  },
-
-  --  +++
-  -- Github stuff
-  --  +++
-
-  -- Official alternative
-  { "zbirenbaum/copilot.lua" },
-  -- +++
+  --
   -- Utils
-  -- +++
+  --
+
   { "skywind3000/asyncrun.vim" },
   { "preservim/vimux" },
   { "Pocco81/AutoSave.nvim" },
@@ -85,15 +57,19 @@ lvim.plugins = {
     "gelguy/wilder.nvim", -- Better Wildmenu
   },
 
-  -- Markdown related --
+  --
+  -- Markdown
+  --
+
   -- Using telekasten currently as daily driver :-)
-  -- { "lervag/wiki.vim" },
   { "renerocksai/telekasten.nvim" },
   --  Telekasten "alternative"
+  -- { "lervag/wiki.vim" },
   --  {
   --    "jakewvincent/mkdnflow.nvim",
   --    branch = "dev",
   --  },
+  -- TODO test: https://github.com/antonk52/markdowny.nvim
   { "preservim/vim-markdown" },
   { "godlygeek/tabular" },
   { "dkarter/bullets.vim" },
@@ -106,14 +82,17 @@ lvim.plugins = {
     ft = { "markdown" },
   },
   { "ekickx/clipboard-image.nvim" },
-  -- TODO test: https://github.com/antonk52/markdowny.nvim
   {
     "antonk52/markdowny.nvim",
     config = function()
       require("markdowny").setup()
     end,
   },
-  -- Git
+
+  --
+  -- Git / GitHub
+  --
+
   {
     "tpope/vim-fugitive",
     cmd = {
@@ -144,6 +123,9 @@ lvim.plugins = {
       require("octo").setup()
     end,
   },
+  -- Official alternative
+  { "zbirenbaum/copilot.lua" }
+
 }
 
 return {
@@ -166,18 +148,5 @@ return {
   wilder = require("user.plugins.wilder_config"),
   neovide = require("user.plugins.neovide"),
   mellifluous = require("user.plugins.mellifluous_config"),
-  -- Further Plugins configuration to load
-  table.insert(lvim.plugins, {
-    "zbirenbaum/copilot-cmp",
-    event = "InsertEnter",
-    requires = { "zbirenbaum/copilot.lua" },
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup()
-        require("copilot_cmp").setup()
-      end, 100)
-    end,
-  })
-
-  -- helm_ls = require("user.plugins.helm_ls_config")
+  copilot = require("user.plugins.copilot_config"),
 }
