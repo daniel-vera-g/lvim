@@ -14,7 +14,7 @@
   "Code": {
     "scope": "tex",
     "prefix": "cd",
-    "body": ["\\code{$1}$0"],
+    "body": ["$2\\code{$1}$0"],
     "description": "Code snippet"
   },
   "Gliederung": {
@@ -25,5 +25,11 @@
   "TODO": {
     "prefix": "td",
     "body": ["% TODO"]
+  },
+  "Footnote": {
+    "scope": "tex",
+    "prefix": "fn",
+    "body": ["$2\\footnote{$1}$0"],
+    "description": "Footnote"
   }
 }
