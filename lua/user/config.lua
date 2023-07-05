@@ -16,3 +16,5 @@ vim.opt.spell = true
 
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
+
+vim.diagnostic.config({ virtual_text = true })
