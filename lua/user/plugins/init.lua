@@ -131,7 +131,7 @@ return {
 	zen_mode = require("user.plugins.zen_mode_config"),
 	twilight = require("user.plugins.twilight_config"),
 	catppuccino = require("user.plugins.catppuccino_config"),
-	luaSnip = require("user.plugins.lunamenip_config"),
+	luaSnip = require("user.plugins.luaSnip_config"),
 	lsp_signature = require("user.plugins.lsp_signature_config"),
 	persistence = require("user.plugins.persistence_config"),
 	telekasten = require("user.plugins.telekasten_config"),
