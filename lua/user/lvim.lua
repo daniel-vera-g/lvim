@@ -16,8 +16,6 @@ lvim.builtin.terminal.open_mapping = "<C-t>"
 
 lvim.builtin.dap.active = true
 
-lvim.lsp.diagnostics.virtual_text = true
-
 lvim.colorscheme = "sweetie"
 
 -- Some manual code adjustments for Lvim...
